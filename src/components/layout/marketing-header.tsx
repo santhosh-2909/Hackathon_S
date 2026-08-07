@@ -108,12 +108,7 @@ function MarketingHeader() {
 
           <span aria-hidden className="mx-1 hidden h-6 w-px bg-slate-200 dark:bg-slate-800 lg:block" />
 
-          <Button asChild size="md" className="hidden rounded-xl shadow-xs sm:inline-flex">
-            <Link href="/problems">
-              <Compass aria-hidden />
-              Browse Statements
-            </Link>
-          </Button>
+          {/* Desktop CTA removed as requested. Mobile menu still contains links. */}
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>

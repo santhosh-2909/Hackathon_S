@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
 import { siteConfig } from '@/config/site';
@@ -26,22 +27,14 @@ function Logo({
       )}
       aria-label={`${siteConfig.name} home`}
     >
-      <span className="grid size-7 shrink-0 place-items-center rounded-md bg-primary text-primary-foreground">
-        <svg viewBox="0 0 16 16" className="size-4" aria-hidden fill="none">
-          <path
-            d="M4 4.5 7.5 8 4 11.5"
-            stroke="currentColor"
-            strokeWidth="1.75"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M9.25 11.5H12.5"
-            stroke="currentColor"
-            strokeWidth="1.75"
-            strokeLinecap="round"
-          />
-        </svg>
+      <span className="grid size-7 shrink-0 place-items-center rounded-md bg-transparent text-primary-foreground">
+        <Image
+          src="/imagery/kira-logo.png"
+          alt={siteConfig.name}
+          width={40}
+          height={40}
+          className="rounded-md object-contain"
+        />
       </span>
       {showWordmark ? (
         <span className="text-h6 tracking-tight whitespace-nowrap">{siteConfig.name}</span>

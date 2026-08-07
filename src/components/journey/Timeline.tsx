@@ -170,9 +170,9 @@ export function Timeline() {
               Teams Participating
             </p>
             <div className="flex items-baseline gap-2 mt-0.5">
-              <span className="text-2xl font-extrabold text-slate-900 dark:text-white">120+</span>
+              <span className="text-2xl font-extrabold text-slate-900 dark:text-white">15</span>
               <span className="text-xs font-semibold text-blue-600 dark:text-blue-400">
-                Registered
+                Teams
               </span>
             </div>
           </div>
