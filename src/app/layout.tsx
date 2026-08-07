@@ -9,6 +9,7 @@ import { ThemeProvider } from '@/providers/theme-provider';
 import { QueryProvider } from '@/providers/query-provider';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Toaster } from '@/components/ui/toaster';
+import CursorLiquid from '@/components/ui/cursor-liquid';
 
 const sans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -106,6 +107,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 <img src="/imagery/kira-logo-new.png" alt={siteConfig.name} className="w-14 h-14 object-contain" />
               </a>
+              {/* Liquid cursor / grid effect overlay */}
+              <CursorLiquid />
               {children}
               <Toaster />
             </TooltipProvider>
