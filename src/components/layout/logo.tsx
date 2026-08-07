@@ -27,17 +27,17 @@ function Logo({
       )}
       aria-label={`${siteConfig.name} home`}
     >
-      <span className="grid size-7 shrink-0 place-items-center rounded-md bg-transparent text-primary-foreground">
+        <span className="grid size-7 shrink-0 place-items-center rounded-md bg-transparent text-primary-foreground">
         <Image
-          src="/imagery/kira-logo.svg"
+          src="/imagery/kira-logo-new.png"
           alt={siteConfig.name}
-          width={40}
-          height={40}
+          width={48}
+          height={48}
           className="rounded-md object-contain"
         />
       </span>
       {showWordmark ? (
-        <span className="text-h6 tracking-tight whitespace-nowrap">{siteConfig.name}</span>
+        <span className="text-h5 tracking-tight whitespace-nowrap">{siteConfig.name}</span>
       ) : null}
     </Link>
   );
