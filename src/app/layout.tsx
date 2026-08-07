@@ -10,6 +10,7 @@ import { QueryProvider } from '@/providers/query-provider';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Toaster } from '@/components/ui/toaster';
 import CursorLiquid from '@/components/ui/cursor-liquid';
+import { Logo } from '@/components/layout/logo';
 
 const sans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -99,14 +100,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 />
               </div>
 
-              {/* Fixed top-left logo for quick navigation */}
-              <a
-                href="/"
-                aria-label={`${siteConfig.name} home`}
-                className="fixed top-4 left-4 z-50 rounded-md p-1 bg-white/80 dark:bg-black/60 backdrop-blur-sm shadow-md"
-              >
-                <img src="/imagery/kira-logo-new.png" alt={siteConfig.name} className="w-14 h-14 object-contain" />
-              </a>
+              {/* Fixed top-left logo — uses Logo component; reveals wordmark on hover */}
+              <div className="fixed top-4 left-4 z-50">
+                <div className="group flex items-center gap-2 rounded-full bg-white/90 dark:bg-black/70 p-1 pr-3 shadow-md backdrop-blur-sm">
+                  <Logo className="p-1 rounded-full" showWordmark={false} />
+                  <span className="hidden group-hover:inline-block text-h4 font-semibold text-primary-foreground dark:text-primary-foreground">
+                    {siteConfig.name}
+                  </span>
+                </div>
+              </div>
               {/* Liquid cursor / grid effect overlay (above watermark) */}
               <CursorLiquid />
               {children}
