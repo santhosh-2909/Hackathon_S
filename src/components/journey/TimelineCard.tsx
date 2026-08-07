@@ -40,24 +40,24 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 const ACCENT_STYLES = [
   {
-    borderHover: 'hover:border-[#4F7CFF]/50 hover:shadow-[0_12px_30px_rgba(79,124,255,0.1)]',
-    leftBorder: 'border-l-4 border-l-[#4F7CFF]',
-    accentText: 'text-[#4F7CFF]',
+    borderHover: 'hover:border-[#2563EB]/50 hover:shadow-[0_12px_30px_rgba(37,99,235,0.1)]',
+    leftBorder: 'border-l-4 border-l-[#2563EB]',
+    accentText: 'text-[#2563EB]',
   },
   {
-    borderHover: 'hover:border-[#8B5CF6]/50 hover:shadow-[0_12px_30px_rgba(139,92,246,0.1)]',
-    leftBorder: 'border-l-4 border-l-[#8B5CF6]',
-    accentText: 'text-[#8B5CF6]',
+    borderHover: 'hover:border-[#0891B2]/50 hover:shadow-[0_12px_30px_rgba(8,145,178,0.1)]',
+    leftBorder: 'border-l-4 border-l-[#0891B2]',
+    accentText: 'text-[#0891B2]',
   },
   {
-    borderHover: 'hover:border-[#EC4899]/50 hover:shadow-[0_12px_30px_rgba(236,72,153,0.1)]',
-    leftBorder: 'border-l-4 border-l-[#EC4899]',
-    accentText: 'text-[#EC4899]',
+    borderHover: 'hover:border-[#0F9F8C]/50 hover:shadow-[0_12px_30px_rgba(15,159,140,0.1)]',
+    leftBorder: 'border-l-4 border-l-[#0F9F8C]',
+    accentText: 'text-[#0F9F8C]',
   },
   {
-    borderHover: 'hover:border-[#10B981]/50 hover:shadow-[0_12px_30px_rgba(16,185,129,0.1)]',
-    leftBorder: 'border-l-4 border-l-[#10B981]',
-    accentText: 'text-[#10B981]',
+    borderHover: 'hover:border-[#D97706]/50 hover:shadow-[0_12px_30px_rgba(217,119,6,0.1)]',
+    leftBorder: 'border-l-4 border-l-[#D97706]',
+    accentText: 'text-[#B45309]',
   },
 ];
 
@@ -148,7 +148,7 @@ export function TimelineCard({ milestone, index, className }: TimelineCardProps)
             {/* DELIVERABLES */}
             <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800">
               <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2.5 flex items-center gap-2">
-                <FileText className="size-4 text-purple-600 dark:text-purple-400" />
+                <FileText className="size-4 text-blue-600 dark:text-blue-400" />
                 <span>Required Deliverables</span>
               </h4>
               <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-300 font-medium">
@@ -164,7 +164,7 @@ export function TimelineCard({ milestone, index, className }: TimelineCardProps)
             {/* EVALUATION CRITERIA */}
             <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800">
               <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 flex items-center gap-2">
-                <ShieldCheck className="size-4 text-purple-600 dark:text-purple-400" />
+                <ShieldCheck className="size-4 text-blue-600 dark:text-blue-400" />
                 <span>Evaluation Criteria</span>
               </h4>
               <div className="space-y-2.5">
@@ -172,11 +172,11 @@ export function TimelineCard({ milestone, index, className }: TimelineCardProps)
                   <div key={idx} className="space-y-1">
                     <div className="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-200">
                       <span>{crit.name}</span>
-                      <span className="text-purple-600 dark:text-purple-400">{crit.weight}</span>
+                      <span className="text-blue-600 dark:text-blue-400">{crit.weight}</span>
                     </div>
                     <div className="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
                       <div
-                        className="bg-purple-600 dark:bg-purple-500 h-full rounded-full"
+                        className="bg-blue-600 dark:bg-blue-500 h-full rounded-full"
                         style={{ width: crit.weight }}
                       />
                     </div>
@@ -187,8 +187,8 @@ export function TimelineCard({ milestone, index, className }: TimelineCardProps)
 
             {/* MENTOR NOTES & TIPS */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="p-3.5 rounded-xl bg-purple-500/5 dark:bg-purple-500/10 border border-purple-500/20">
-                <h5 className="text-[11px] font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300 mb-1 flex items-center gap-1.5">
+              <div className="p-3.5 rounded-xl bg-blue-500/5 dark:bg-blue-500/10 border border-blue-500/20">
+                <h5 className="text-[11px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300 mb-1 flex items-center gap-1.5">
                   <LightbulbIcon className="size-3.5" />
                   Mentor Note
                 </h5>

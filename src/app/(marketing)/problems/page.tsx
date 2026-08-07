@@ -9,14 +9,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { EmptyState } from '@/components/common/empty-state';
 import { Skeleton, SkeletonRegion } from '@/components/ui/skeleton';
-import { ProblemCard } from '@/features/problems/components/problem-card';
+import { ProblemCard, StudentInnovationCard } from '@/features/problems/components/problem-card';
 import { ProblemFilters } from '@/features/problems/components/problem-filters';
 import { ProblemPagination } from '@/features/problems/components/problem-pagination';
 
 export const metadata: Metadata = {
   title: 'Problem statements',
   description:
-    'Ten researched SIH problem statements across Healthcare, AI/ML, Cybersecurity, Spacetech and Edutech — filtered for real-world impact, medium difficulty and weekend feasibility — plus a student innovation idea.',
+    'Ten researched SIH problem statements across Healthcare, AI/ML, Cybersecurity, Spacetech and Edutech — filtered for real-world impact, medium difficulty and weekend feasibility — plus guidance for developing your own student innovation idea.',
   alternates: { canonical: '/problems' },
 };
 
@@ -47,11 +47,8 @@ export default async function ProblemsPage({ searchParams }: { searchParams: Sea
           Compiled for third-year, first-time teams. Every entry passed the same filter: a real
           problem, medium difficulty, and buildable as a working prototype in the time box.{' '}
           {catalogue.official} are researched SIH statements — verify their PS numbers and dataset
-          links on the live portal before locking a choice.{' '}
-          {catalogue.student === 1 ? 'The last is a' : `${catalogue.student} are`} student
-          innovation
-          {catalogue.student === 1 ? ' idea' : ' ideas'}, marked as such and carrying no portal
-          code.
+          links on the live portal before locking a choice. For Student Innovation, choose a real
+          problem you have observed and develop your team&apos;s own idea.
         </p>
       </header>
 
@@ -101,6 +98,16 @@ async function Results({ params }: { params: Record<string, string | string[] | 
     : 'relevance';
   const page = Math.max(1, Number(first(params.page) ?? 1) || 1);
 
+  if (domain === 'student-innovation') {
+    return (
+      <ul className="grid max-w-md gap-5 sm:grid-cols-1">
+        <li className="flex">
+          <StudentInnovationCard className="w-full" />
+        </li>
+      </ul>
+    );
+  }
+
   const result = await listProblems({ q, domain, sort, page, perPage: PER_PAGE });
 
   const baseParams = new URLSearchParams();
@@ -137,6 +144,11 @@ async function Results({ params }: { params: Record<string, string | string[] | 
             <ProblemCard problem={problem} className="flex-1" priority={index < 3} />
           </li>
         ))}
+        {domain === 'all' && result.page === 1 ? (
+          <li className="flex">
+            <StudentInnovationCard className="flex-1" />
+          </li>
+        ) : null}
       </ul>
 
       <ProblemPagination

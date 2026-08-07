@@ -98,8 +98,8 @@ export default function ProblemStatementPage() {
         <div className="flex max-w-xl flex-col gap-1.5">
           <h2 className="text-h3">Now pick one worth solving</h2>
           <p className="text-body-sm text-muted-foreground">
-            Ten researched SIH statements plus a student innovation idea, filtered for real-world
-            impact and weekend feasibility — each already written as pain rather than as a solution.
+            Ten researched SIH statements plus guided problem discovery, filtered for real-world
+            impact and weekend feasibility — each written as pain rather than as a solution.
           </p>
         </div>
         <div className="flex shrink-0 flex-wrap gap-2">

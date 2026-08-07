@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUpRight, Clock, Lightbulb } from 'lucide-react';
+import { ArrowUpRight, Clock, Lightbulb, Sparkles } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import type { ProblemStatement } from '@/types/problem';
@@ -106,3 +106,51 @@ function ProblemCard({ problem, className, withImage = true, priority = false }:
 }
 
 export { ProblemCard };
+
+/** A first-class directory card for open innovation: it is deliberately not a
+ * fabricated statement, but it sits in the same grid so teams can choose it
+ * with the official challenges. */
+function StudentInnovationCard({ className }: { className?: string }) {
+  return (
+    <Card
+      className={cn(
+        'group relative aspect-square overflow-hidden border-accent-border bg-linear-to-br from-accent-surface via-surface to-cyan-50 transition-[border-color,box-shadow,transform] duration-200 ease-[var(--ease-standard)]',
+        'hover:-translate-y-0.5 hover:border-accent hover:shadow-e3 focus-within:border-accent focus-within:shadow-e3 dark:to-cyan-950/20',
+        className,
+      )}
+    >
+      <div className="pointer-events-none absolute -top-12 -right-12 size-40 rounded-full bg-cyan-300/35 blur-2xl dark:bg-cyan-500/15" />
+      <div className="pointer-events-none absolute -bottom-12 -left-12 size-44 rounded-full bg-blue-300/30 blur-2xl dark:bg-blue-500/15" />
+      <div className="relative flex h-full flex-col gap-4 p-5">
+        <div className="flex items-center justify-between">
+          <Badge variant="accent" size="sm">
+            <Lightbulb aria-hidden />
+            Student Innovation
+          </Badge>
+          <Sparkles className="size-5 text-accent" aria-hidden />
+        </div>
+        <div className="flex flex-1 flex-col justify-center gap-3">
+          <p className="font-mono text-caption text-accent-text">OPEN INNOVATION</p>
+          <h3 className="text-h4">
+            <Link
+              href="/build-your-own"
+              className="rounded-xs after:absolute after:inset-0 after:content-[''] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+            >
+              Start with an idea from your world
+            </Link>
+          </h3>
+          <p className="text-body-sm text-muted-foreground">
+            Observe a challenge on your campus or in your community, validate it with people, and
+            turn it into a project your team can own.
+          </p>
+        </div>
+        <div className="flex items-center justify-between border-t border-accent-border pt-3 text-body-sm font-medium text-accent-text">
+          <span>Choose your own challenge</span>
+          <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+export { StudentInnovationCard };

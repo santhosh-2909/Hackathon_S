@@ -2,7 +2,7 @@
   "name": "kira-workshop",
   "version": "1.0.0",
   "private": true,
-  "description": "Kira Learning — Problem Statement Workshop. Marketing site + participant workspace.",
+  "description": "Hackathon_2026 — Innovation Challenge. Problem discovery and project-building toolkit.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

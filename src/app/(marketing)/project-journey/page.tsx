@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { ProjectJourney } from '@/features/marketing/project-journey';
 
 export const metadata: Metadata = {
-  title: 'Project Journey',
+  title: 'Timeline',
   description:
-    'Track every milestone from problem statement release to the Grand Finale with a clear visual roadmap designed for teams.',
+    'A clear Hackathon_2026 timeline from challenge selection to the Grand Finale.',
 };
 
 export default function ProjectJourneyPage() {

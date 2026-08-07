@@ -17,8 +17,8 @@ function CtaBand() {
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button asChild size="lg" variant="accent">
-            <Link href="/sign-up">
-              Create a workspace
+            <Link href="/build-your-own">
+              Build your own idea
               <ArrowRight aria-hidden />
             </Link>
           </Button>

@@ -95,11 +95,10 @@ export async function getFeaturedProblems(count = 3): Promise<ProblemStatement[]
  * moment an eleventh entry was appended, in five places at once.
  */
 export async function getCatalogueCounts() {
-  const student = PROBLEM_STATEMENTS.filter((p) => p.origin === 'student-innovation').length;
   return {
     total: PROBLEM_STATEMENTS.length,
-    official: PROBLEM_STATEMENTS.length - student,
-    student,
+    official: PROBLEM_STATEMENTS.length,
+    student: 0,
   };
 }
 

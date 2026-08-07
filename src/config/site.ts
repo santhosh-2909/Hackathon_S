@@ -24,10 +24,10 @@ function resolveSiteUrl() {
  * Metadata, structured data, sitemap and the OG image all read from here.
  */
 export const siteConfig = {
-  name: 'Kira Learning',
-  product: 'Problem Statement Workshop',
-  title: 'Kira Learning — Problem Statement Workshop',
-  tagline: 'Pick a problem worth solving. Then ship it.',
+  name: 'Hackathon_2026',
+  product: 'Innovation Challenge',
+  title: 'Hackathon_2026 — Innovation Challenge',
+  tagline: 'Discover. Build. Demo.',
   description:
     'A working method for choosing hackathon problem statements: the pain-not-solution template, five pre-build checks, a weekend delivery plan, and a researched directory of ten real SIH problem statements.',
   url: resolveSiteUrl(),

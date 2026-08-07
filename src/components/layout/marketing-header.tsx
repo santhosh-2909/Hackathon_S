@@ -78,13 +78,13 @@ function MarketingHeader() {
                     className={cn(
                       'relative inline-flex h-9 items-center rounded-xl px-3 text-sm font-medium whitespace-nowrap transition-all duration-200',
                       active
-                        ? 'text-purple-600 dark:text-purple-400 font-semibold bg-purple-50 dark:bg-purple-950/60'
+                        ? 'bg-accent-surface text-accent-text font-semibold'
                         : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white',
                     )}
                   >
                     {item.label}
                     {active && (
-                      <span className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-purple-600 dark:bg-purple-400" />
+                      <span className="absolute right-3 bottom-0 left-3 h-0.5 rounded-full bg-accent" />
                     )}
                   </Link>
                 </li>
@@ -108,7 +108,7 @@ function MarketingHeader() {
 
           <span aria-hidden className="mx-1 hidden h-6 w-px bg-slate-200 dark:bg-slate-800 lg:block" />
 
-          <Button asChild size="md" className="hidden sm:inline-flex rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold shadow-xs">
+          <Button asChild size="md" className="hidden rounded-xl shadow-xs sm:inline-flex">
             <Link href="/problems">
               <Compass aria-hidden />
               Browse Statements

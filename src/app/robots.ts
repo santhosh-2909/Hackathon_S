@@ -7,8 +7,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      // Authenticated and credential surfaces carry no public value.
-      disallow: ['/dashboard', '/sign-up'],
+      // The workshop has no account or credential surfaces.
+      disallow: ['/dashboard'],
     },
     sitemap: `${siteConfig.url}/sitemap.xml`,
   };

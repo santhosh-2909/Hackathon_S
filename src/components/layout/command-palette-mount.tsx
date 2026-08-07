@@ -4,15 +4,11 @@ import { CommandPalette, type CommandEntry } from '@/components/layout/command-p
 const PAGES: CommandEntry[] = [
   { id: 'home', label: 'Home', href: '/' },
   { id: 'problem-statement', label: 'Problem statement guide', href: '/problem-statement' },
-  { id: 'problems', label: 'Problem statements', href: '/problems', hint: '11 entries' },
+  { id: 'problems', label: 'Problem statements', href: '/problems', hint: '10 entries' },
+  { id: 'build-your-own', label: 'Build your own idea', href: '/build-your-own' },
   { id: 'workshop', label: 'Technical workshop deck', href: '/workshop', hint: '72 slides' },
   { id: 'deck', label: 'Pitch deck template', href: '/deck', hint: '7 slides' },
   { id: 'playbook', label: 'Playbook', href: '/playbook' },
-  { id: 'dashboard', label: 'Dashboard', href: '/dashboard' },
-  { id: 'library', label: 'Library', href: '/dashboard/library' },
-  { id: 'team', label: 'Team', href: '/dashboard/team' },
-  { id: 'submissions', label: 'Submissions', href: '/dashboard/submissions' },
-  { id: 'settings', label: 'Settings', href: '/dashboard/settings' },
 ];
 
 /**

@@ -15,28 +15,28 @@ interface TimelineNodeProps {
 
 const STAGE_COLORS = [
   {
-    ring: 'border-[#4F7CFF]/40 bg-[#4F7CFF]/10 text-[#4F7CFF]',
-    dot: 'bg-[#4F7CFF]',
-    glow: 'shadow-[0_0_16px_rgba(79,124,255,0.4)]',
-    badge: 'bg-blue-50 text-[#4F7CFF] border-blue-200 dark:bg-blue-950/60 dark:border-blue-800 dark:text-blue-300',
+    ring: 'border-[#2563EB]/40 bg-[#2563EB]/10 text-[#2563EB]',
+    dot: 'bg-[#2563EB]',
+    glow: 'shadow-[0_0_16px_rgba(37,99,235,0.35)]',
+    badge: 'border-blue-200 bg-blue-50 text-[#2563EB] dark:border-blue-800 dark:bg-blue-950/60 dark:text-blue-300',
   },
   {
-    ring: 'border-[#8B5CF6]/40 bg-[#8B5CF6]/10 text-[#8B5CF6]',
-    dot: 'bg-[#8B5CF6]',
-    glow: 'shadow-[0_0_16px_rgba(139,92,246,0.4)]',
-    badge: 'bg-purple-50 text-[#8B5CF6] border-purple-200 dark:bg-purple-950/60 dark:border-purple-800 dark:text-purple-300',
+    ring: 'border-[#0891B2]/40 bg-[#0891B2]/10 text-[#0891B2]',
+    dot: 'bg-[#0891B2]',
+    glow: 'shadow-[0_0_16px_rgba(8,145,178,0.35)]',
+    badge: 'border-cyan-200 bg-cyan-50 text-[#0891B2] dark:border-cyan-800 dark:bg-cyan-950/60 dark:text-cyan-300',
   },
   {
-    ring: 'border-[#EC4899]/40 bg-[#EC4899]/10 text-[#EC4899]',
-    dot: 'bg-[#EC4899]',
-    glow: 'shadow-[0_0_16px_rgba(236,72,153,0.4)]',
-    badge: 'bg-pink-50 text-[#EC4899] border-pink-200 dark:bg-pink-950/60 dark:border-pink-800 dark:text-pink-300',
+    ring: 'border-[#0F9F8C]/40 bg-[#0F9F8C]/10 text-[#0F9F8C]',
+    dot: 'bg-[#0F9F8C]',
+    glow: 'shadow-[0_0_16px_rgba(15,159,140,0.35)]',
+    badge: 'border-teal-200 bg-teal-50 text-[#0F9F8C] dark:border-teal-800 dark:bg-teal-950/60 dark:text-teal-300',
   },
   {
-    ring: 'border-[#10B981]/40 bg-[#10B981]/10 text-[#10B981]',
-    dot: 'bg-[#10B981]',
-    glow: 'shadow-[0_0_16px_rgba(16,185,129,0.4)]',
-    badge: 'bg-emerald-50 text-[#10B981] border-emerald-200 dark:bg-emerald-950/60 dark:border-emerald-800 dark:text-emerald-300',
+    ring: 'border-[#D97706]/40 bg-[#D97706]/10 text-[#D97706]',
+    dot: 'bg-[#D97706]',
+    glow: 'shadow-[0_0_16px_rgba(217,119,6,0.3)]',
+    badge: 'border-amber-200 bg-amber-50 text-[#B45309] dark:border-amber-800 dark:bg-amber-950/60 dark:text-amber-300',
   },
 ];
 

@@ -22,8 +22,8 @@ export async function buildDeckFile(): Promise<Buffer> {
   const pptx = new PptxGenJS();
 
   pptx.layout = 'LAYOUT_16x9';
-  pptx.author = 'Kira Learning';
-  pptx.company = 'Kira Learning';
+  pptx.author = 'Hackathon_2026';
+  pptx.company = 'Hackathon_2026';
   pptx.title = DECK_META.title;
   pptx.subject = DECK_META.subtitle;
 

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Kira Workshop — Design tokens
+   Hackathon_2026 — Design tokens
    --------------------------------------------------------------------------
    Single source of truth for colour, type, space, radius, elevation, motion.
    Every value is authored once here as a CSS custom property, then exposed to
@@ -19,36 +19,36 @@
      The page plane is a warm paper cream; cards are plain white on top of it.
      That inversion — tinted page, neutral card — is what gives the marketing
      surface its warmth without tinting any content. */
-  --canvas: oklch(0.97 0.033 100);
-  --background: oklch(0.97 0.033 100);
-  --foreground: oklch(0.165 0.012 95);
+  --canvas: oklch(0.975 0.012 250);
+  --background: oklch(0.975 0.012 250);
+  --foreground: oklch(0.205 0.025 260);
 
   --surface: oklch(1 0 0);
   --surface-raised: oklch(1 0 0);
-  --surface-sunken: oklch(0.945 0.032 100);
-  --surface-inverse: oklch(0.165 0.012 95);
+  --surface-sunken: oklch(0.945 0.022 250);
+  --surface-inverse: oklch(0.205 0.025 260);
   --surface-inverse-foreground: oklch(0.9851 0.0012 264);
 
-  --muted: oklch(0.945 0.03 100);
-  --muted-foreground: oklch(0.435 0.015 95);
+  --muted: oklch(0.945 0.022 250);
+  --muted-foreground: oklch(0.435 0.025 260);
   /* Stepped to clear 4.5:1 against the darkest light plane it sits on
      (--surface-sunken), because it carries caption-size text. */
-  --subtle-foreground: oklch(0.505 0.013 95);
+  --subtle-foreground: oklch(0.505 0.022 260);
 
-  --border: oklch(0.87 0.018 100);
+  --border: oklch(0.87 0.02 250);
   /* Both of these bound a control rather than decorate it, so they carry the
      3:1 that WCAG 1.4.11 requires — `--border-strong` against the cream page,
      `--input` against the white card a field actually sits on. */
-  --border-strong: oklch(0.647 0.022 100);
-  --input: oklch(0.6685 0.02 100);
+  --border-strong: oklch(0.647 0.03 250);
+  --input: oklch(0.6685 0.028 250);
 
   /* --- Brand & interaction ----------------------------------------------- */
-  --primary: oklch(0.19 0.012 95);
+  --primary: oklch(0.255 0.055 260);
   --primary-foreground: oklch(0.9851 0.0012 264);
-  --primary-hover: oklch(0.27 0.013 95);
+  --primary-hover: oklch(0.205 0.055 260);
 
-  --secondary: oklch(0.945 0.03 100);
-  --secondary-foreground: oklch(0.23 0.012 95);
+  --secondary: oklch(0.945 0.022 250);
+  --secondary-foreground: oklch(0.23 0.025 260);
 
   /* Violet. Reserved for emphasis, active state and the focus ring — never used
      as a page-wide wash.
@@ -59,23 +59,23 @@
      including --accent-surface; `--accent-soft` is the pale BUTTON FILL that
      carries near-black text, with `--accent-soft-border` giving that fill the
      3:1 boundary WCAG 1.4.11 requires against the cream page. */
-  --accent: oklch(0.48 0.22 295);
+  --accent: oklch(0.56 0.19 255);
   --accent-foreground: oklch(0.9925 0 0);
-  --accent-hover: oklch(0.42 0.22 295);
-  --accent-text: oklch(0.45 0.22 295);
+  --accent-hover: oklch(0.49 0.19 255);
+  --accent-text: oklch(0.43 0.17 255);
   /* Accent as ink on --surface-inverse. Inverted panels flip lightness between
      modes, so this step flips with them; the plain accent would fail on one
      side or the other. */
-  --accent-on-inverse: oklch(0.78 0.13 300);
-  --accent-soft: oklch(0.84 0.095 300);
-  --accent-soft-foreground: oklch(0.19 0.05 300);
-  --accent-soft-border: oklch(0.61 0.15 300);
-  --accent-soft-hover: oklch(0.79 0.11 300);
-  --accent-surface: oklch(0.942 0.04 300);
-  --accent-border: oklch(0.84 0.08 300);
+  --accent-on-inverse: oklch(0.77 0.11 245);
+  --accent-soft: oklch(0.87 0.07 245);
+  --accent-soft-foreground: oklch(0.23 0.07 255);
+  --accent-soft-border: oklch(0.65 0.13 250);
+  --accent-soft-hover: oklch(0.82 0.09 245);
+  --accent-surface: oklch(0.955 0.03 245);
+  --accent-border: oklch(0.84 0.07 245);
 
-  --ring: oklch(0.48 0.22 295);
-  --overlay: oklch(0.165 0.012 95 / 0.5);
+  --ring: oklch(0.56 0.19 255);
+  --overlay: oklch(0.205 0.025 260 / 0.5);
 
   /* --- Semantic status ---------------------------------------------------
      Marks use the reserved status palette; the `-foreground` step is the

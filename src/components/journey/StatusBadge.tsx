@@ -26,7 +26,7 @@ const STATUS_CONFIG: Record<
     label: 'Live',
     icon: Play,
     className:
-      'bg-purple-500/10 text-purple-700 dark:text-purple-400 border-purple-500/30 dark:border-purple-500/30',
+      'bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/30 dark:border-blue-500/30',
   },
   Upcoming: {
     label: 'Upcoming',

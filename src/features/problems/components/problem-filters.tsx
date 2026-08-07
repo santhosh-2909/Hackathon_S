@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/select';
 
 interface ProblemFiltersProps {
-  counts: { id: string; label: string; count: number }[];
+  counts: { id: string; label: string; count: number | null }[];
   total: number;
 }
 
@@ -147,7 +147,11 @@ function ProblemFilters({ counts, total }: ProblemFiltersProps) {
           <FilterChip
             key={domain.id}
             label={domain.label}
-            count={counts.find((c) => c.id === domain.id)?.count ?? 0}
+            count={
+              domain.id === 'student-innovation'
+                ? null
+                : (counts.find((c) => c.id === domain.id)?.count ?? 0)
+            }
             active={activeDomain === domain.id}
             onSelect={() => commit({ domain: domain.id })}
           />
@@ -164,7 +168,7 @@ function FilterChip({
   onSelect,
 }: {
   label: string;
-  count: number;
+  count: number | null;
   active: boolean;
   onSelect: () => void;
 }) {
@@ -183,14 +187,16 @@ function FilterChip({
       )}
     >
       {label}
-      <span
-        className={cn(
-          'font-mono text-[0.6875rem]',
-          active ? 'opacity-70' : 'text-subtle-foreground',
-        )}
-      >
-        {count}
-      </span>
+      {count !== null ? (
+        <span
+          className={cn(
+            'font-mono text-[0.6875rem]',
+            active ? 'opacity-70' : 'text-subtle-foreground',
+          )}
+        >
+          {count}
+        </span>
+      ) : null}
     </button>
   );
 }

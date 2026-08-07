@@ -113,7 +113,7 @@ export default async function ProblemDetailPage({ params }: { params: Params }) 
 
           <div className="flex flex-wrap gap-3 pt-2">
             <Button asChild>
-              <Link href="/sign-up">Track this statement</Link>
+              <Link href="/build-your-own">Build your own idea</Link>
             </Button>
             <Button asChild variant="outline">
               <Link href={`/problems?domain=${problem.domain}`}>

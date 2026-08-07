@@ -171,7 +171,7 @@ export function Timeline() {
             </p>
             <div className="flex items-baseline gap-2 mt-0.5">
               <span className="text-2xl font-extrabold text-slate-900 dark:text-white">120+</span>
-              <span className="text-xs font-semibold text-purple-600 dark:text-purple-400">
+              <span className="text-xs font-semibold text-blue-600 dark:text-blue-400">
                 Registered
               </span>
             </div>
@@ -236,8 +236,8 @@ export function Timeline() {
         >
           <div>
             <div className="flex items-center justify-between mb-4">
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 flex items-center gap-1.5">
-                <Flame className="size-3.5 text-purple-600 dark:text-purple-400" />
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 flex items-center gap-1.5">
+                <Flame className="size-3.5 text-blue-600 dark:text-blue-400" />
                 Next Deadline
               </span>
               <span className="text-xs text-slate-500 font-medium">Round 1 Evaluation</span>
@@ -281,7 +281,7 @@ export function Timeline() {
 
           <Button
             onClick={() => setSelectedMilestone(INITIAL_MILESTONES[1] ?? null)}
-            className="w-full h-11 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2"
+            className="w-full h-11 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2"
           >
             <span>Prepare Deliverables</span>
             <ArrowRight className="size-4" />
@@ -304,7 +304,7 @@ export function Timeline() {
               </span>
               <button
                 onClick={handleNextTip}
-                className="text-xs font-semibold text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 flex items-center gap-1 transition-colors cursor-pointer"
+                className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 flex items-center gap-1 transition-colors cursor-pointer"
               >
                 <RefreshCw className="size-3" />
                 <span>Next Insight</span>
@@ -319,7 +319,7 @@ export function Timeline() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.25 }}
-                  className="text-base sm:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed border-l-3 border-purple-600 pl-4 py-1"
+                  className="text-base sm:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed border-l-3 border-blue-600 pl-4 py-1"
                 >
                   &ldquo;{MENTOR_TIPS[activeTipIndex]}&rdquo;
                 </motion.blockquote>

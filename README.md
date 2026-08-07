@@ -1,6 +1,6 @@
-# Kira Learning — Problem Statement Workshop
+# Hackathon_2026 — Innovation Challenge
 
-A Next.js App Router rebuild of the Kira Learning workshop site. Two surfaces in one
+A Next.js App Router experience for the Hackathon_2026 innovation challenge. Two surfaces in one
 application:
 
 - **Marketing** — the method for choosing a hackathon problem statement, a researched

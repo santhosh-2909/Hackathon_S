@@ -67,7 +67,7 @@ function Hero() {
               </Button>
             </div>
             <p className="text-caption text-muted-foreground">
-              Ten researched SIH statements, plus a student innovation idea
+              Ten researched SIH statements, plus guided problem discovery
             </p>
           </Reveal>
 
