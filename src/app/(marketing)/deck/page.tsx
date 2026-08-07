@@ -51,9 +51,13 @@ export default function DeckPage() {
 
       <header className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-10">
         <div className="flex max-w-2xl flex-col gap-3">
-          <p className="overline text-accent-text">Template</p>
+          <p className="overline text-accent-text">Pitch template</p>
           <h1 className="font-display text-display-lg">{DECK_META.title}</h1>
           <p className="text-body-lg text-muted-foreground">{DECK_META.subtitle}</p>
+          <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-accent-text">
+            <Presentation className="size-4" aria-hidden />
+            <span>Round 1 · Round 2 · Finals</span>
+          </div>
           <div className="mt-1 flex flex-wrap items-center gap-2">
             <Badge variant="outline">
               <Presentation aria-hidden />

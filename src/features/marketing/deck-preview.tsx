@@ -34,22 +34,36 @@ function DeckPreview() {
             <p className="overline text-accent-text">{WORKSHOP_DECK.eyebrow}</p>
             <h2 className="font-display text-h2 leading-tight">{WORKSHOP_DECK.title}</h2>
           </div>
-          <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-accent-soft-border bg-accent-soft text-accent-soft-foreground">
+          <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-accent-soft-border bg-accent-soft text-accent-soft-foreground">
             <Presentation className="size-5" aria-hidden />
+          </div>
+        </div>
+        <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+          <span className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500 border border-slate-200">
+            Pitch template
+          </span>
+          <span className="rounded-full bg-blue-50 px-3 py-1 text-xs text-blue-700 border border-blue-100">
+            Round 1 · Round 2 · Finals
           </span>
         </div>
 
-        <div className="flex flex-wrap gap-1.5">
-          <Badge variant="outline" size="sm">
-            {WORKSHOP_DECK.slideCount} slides
-          </Badge>
-          <Badge variant="outline" size="sm">
-            <Layers aria-hidden />
-            {WORKSHOP_DECK.moduleCount} modules
-          </Badge>
-          <Badge variant="neutral" size="sm">
-            .pptx · {WORKSHOP_DECK.fileSizeMb} MB
-          </Badge>
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-wrap gap-1.5">
+            <Badge variant="outline" size="sm">
+              {WORKSHOP_DECK.slideCount} slides
+            </Badge>
+            <Badge variant="outline" size="sm">
+              <Layers aria-hidden />
+              {WORKSHOP_DECK.moduleCount} modules
+            </Badge>
+            <Badge variant="neutral" size="sm">
+              .pptx · {WORKSHOP_DECK.fileSizeMb} MB
+            </Badge>
+          </div>
+          <p className="text-caption text-muted-foreground">
+            Pitch template for Round 1, Round 2, and Finals — built to keep your story
+            consistent across every stage.
+          </p>
         </div>
 
         <ol className="flex flex-col gap-2 border-t border-border pt-4">

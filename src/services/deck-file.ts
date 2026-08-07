@@ -53,6 +53,51 @@ export async function buildDeckFile(): Promise<Buffer> {
     slideNumber: { x: 9.0, y: 4.92, fontSize: 10, color: SUBTLE, fontFace: 'Arial' },
   });
 
+  const cover = pptx.addSlide({ masterName: 'KIRA_MASTER' });
+
+  cover.addText('Round 1 · Round 2 · Finals', {
+    x: 0.5,
+    y: 1.2,
+    w: 9,
+    h: 0.8,
+    fontSize: 32,
+    bold: true,
+    color: ACCENT,
+    fontFace: 'Arial',
+  });
+
+  cover.addText('Pitch deck template', {
+    x: 0.5,
+    y: 2.2,
+    w: 9,
+    h: 0.9,
+    fontSize: 48,
+    bold: true,
+    color: INK,
+    fontFace: 'Georgia',
+  });
+
+  cover.addText('Use this deck for every stage of the hackathon — Round 1, Round 2, and Finals.', {
+    x: 0.5,
+    y: 3.4,
+    w: 9,
+    h: 0.6,
+    fontSize: 16,
+    color: MUTED,
+    fontFace: 'Arial',
+  });
+
+  cover.addText('KIRA Hackathon', {
+    x: 0.5,
+    y: 4.8,
+    w: 9,
+    h: 0.5,
+    fontSize: 14,
+    bold: true,
+    color: SUBTLE,
+    fontFace: 'Arial',
+  });
+
   for (const slide of DECK_SLIDES) {
     const s = pptx.addSlide({ masterName: 'KIRA_MASTER' });
 

@@ -11,8 +11,8 @@ import type { DeckMeta, DeckSlide } from '@/types/deck';
  * `seconds` sums to `DECK_META.totalSeconds`; keep them in sync when editing.
  */
 export const DECK_META: DeckMeta = {
-  title: 'Hackathon pitch deck',
-  subtitle: 'Seven slides, five minutes, one problem worth solving',
+  title: 'Hackathon pitch template',
+  subtitle: 'Round 1 · Round 2 · Finals — one deck for every stage',
   totalSeconds: 300,
 };
 
