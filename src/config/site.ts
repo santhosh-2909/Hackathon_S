@@ -24,9 +24,9 @@ function resolveSiteUrl() {
  * Metadata, structured data, sitemap and the OG image all read from here.
  */
 export const siteConfig = {
-  name: 'Hackathon_2026',
+  name: 'Kira_2026',
   product: 'Innovation Challenge',
-  title: 'Hackathon_2026 — Innovation Challenge',
+  title: 'Kira_2026 — Innovation Challenge',
   tagline: 'Discover. Build. Demo.',
   description:
     'A working method for choosing hackathon problem statements: the pain-not-solution template, five pre-build checks, a weekend delivery plan, and a researched directory of ten real SIH problem statements.',

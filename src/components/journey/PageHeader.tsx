@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { siteConfig } from '@/config/site';
 import { motion } from 'framer-motion';
 
 export function PageHeader() {
@@ -12,7 +13,7 @@ export function PageHeader() {
         transition={{ duration: 0.35 }}
         className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent-border bg-accent-surface px-3.5 py-1 text-[11px] font-bold tracking-widest text-accent-text uppercase shadow-e1"
       >
-        <span>HACKATHON_2026 TIMELINE</span>
+        <span>{siteConfig.name} TIMELINE</span>
       </motion.div>
 
       {/* Large Desktop Typography Heading (72px) */}

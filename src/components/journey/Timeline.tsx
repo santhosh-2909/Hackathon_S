@@ -87,7 +87,7 @@ export function Timeline() {
       {/* DESKTOP HORIZONTAL CONTINUOUS TIMELINE */}
       <div className="hidden lg:block relative mb-20">
         {/* Continuous 4px Gradient Line (Blue -> Purple -> Pink -> Green) */}
-        <div className="absolute top-[72px] left-[12%] right-[12%] z-0">
+        <div className="absolute left-[12%] right-[12%] top-1/2 -translate-y-1/2 z-0">
           <AnimatedProgress progressPercentage={progressPercentage} orientation="horizontal" />
         </div>
 
@@ -232,7 +232,7 @@ export function Timeline() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-2xs flex flex-col justify-between"
+          className="p-8 rounded-[24px] lg:rounded-tl-none bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-2xs flex flex-col justify-between"
         >
           <div>
             <div className="flex items-center justify-between mb-4">

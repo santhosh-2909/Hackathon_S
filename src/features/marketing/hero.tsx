@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Compass } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+import { WORKSHOP_DECK } from '@/constants/workshop-deck';
 import { Reveal } from '@/components/common/reveal';
 import { DeckPreview } from '@/features/marketing/deck-preview';
 
@@ -24,6 +25,22 @@ const SIGNALS = [
 function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
+      {/* Final PPT template banner */}
+      <div className="container-page mb-6">
+        <div className="rounded-xl border border-slate-200/80 bg-white dark:bg-slate-900 p-4 flex items-center justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold">Final PPT Template</p>
+            <p className="text-xs text-slate-500">Use this final template for your Finals pitch. Do not modify the template — changing the template may lead to disqualification.</p>
+          </div>
+          <div className="ml-auto">
+            <Button asChild size="lg" className="h-10 px-4">
+              <a href={WORKSHOP_DECK.finalFileHref} download>
+                Download Final_pres.pptx
+              </a>
+            </Button>
+          </div>
+        </div>
+      </div>
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(79,70,229,0.12),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(251,146,60,0.14),_transparent_30%)]" />
         <div className="absolute inset-0 flex items-center justify-center opacity-10">
