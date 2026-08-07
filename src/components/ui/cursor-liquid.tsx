@@ -99,10 +99,10 @@ export default function CursorLiquid() {
     };
   }, []);
 
-  return (
+    return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 -z-20 w-full h-full opacity-100"
+      className="pointer-events-none fixed inset-0 -z-10 w-full h-full opacity-100"
       style={{ filter: "blur(18px) contrast(1.05)", mixBlendMode: "screen" }}
     />
   );

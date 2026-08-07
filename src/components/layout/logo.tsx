@@ -37,7 +37,7 @@ function Logo({
         />
       </span>
       {showWordmark ? (
-        <span className="text-h5 tracking-tight whitespace-nowrap">{siteConfig.name}</span>
+        <span className="text-h4 tracking-tight whitespace-nowrap">{siteConfig.name}</span>
       ) : null}
     </Link>
   );

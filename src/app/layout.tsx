@@ -90,12 +90,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Skip to content
               </a>
               {/* Watermark background (pointer-events-none so it doesn't block interaction) */}
-              <div className="pointer-events-none fixed inset-0 -z-10 flex items-center justify-center">
+              <div className="pointer-events-none fixed inset-0 -z-20 flex items-center justify-center">
                 <img
                   src="/imagery/kira-logo-new.png"
                   alt="Kira watermark"
-                  className="max-w-[1400px] w-3/4 object-contain transform -translate-y-12 rotate-[-12deg]"
-                  style={{ opacity: 0.06 }}
+                  className="max-w-[900px] w-1/2 object-contain transform -translate-y-8 rotate-[-8deg]"
+                  style={{ opacity: 0.04 }}
                 />
               </div>
 
@@ -107,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 <img src="/imagery/kira-logo-new.png" alt={siteConfig.name} className="w-14 h-14 object-contain" />
               </a>
-              {/* Liquid cursor / grid effect overlay */}
+              {/* Liquid cursor / grid effect overlay (above watermark) */}
               <CursorLiquid />
               {children}
               <Toaster />
