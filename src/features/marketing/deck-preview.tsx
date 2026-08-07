@@ -1,18 +1,16 @@
 import Link from 'next/link';
-import { ArrowUpRight, Download, FileText, Layers, Presentation } from 'lucide-react';
+import { ArrowUpRight, Download, FileText, Layers, Presentation, Timeline } from 'lucide-react';
 
 import { WORKSHOP_DECK, WORKSHOP_PARTS } from '@/constants/workshop-deck';
-import { DECK_SLIDES } from '@/constants/deck-template';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
 /**
  * Hero-side deck panel.
  *
- * Leads with the real workshop deck and keeps the generated pitch template as a
- * secondary line, so both are reachable without turning the hero into a menu.
- * The stacked cards behind the panel are decoration only — `aria-hidden`, and
- * behind the live content.
+ * Highlights the workshop deck and finals pitch download without turning the
+ * hero into a menu. The stacked cards behind the panel are decoration only —
+ * `aria-hidden`, and behind the live content.
  */
 function DeckPreview() {
   const parts = WORKSHOP_PARTS.map((part) => part.title);
@@ -38,12 +36,13 @@ function DeckPreview() {
             <Presentation className="size-5" aria-hidden />
           </div>
         </div>
-        <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-muted-foreground">
           <span className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-500 border border-slate-200">
-            Pitch template
+            Workshop deck
           </span>
-          <span className="rounded-full bg-blue-50 px-3 py-1 text-xs text-blue-700 border border-blue-100">
-            Round 1 · Round 2 · Finals
+          <span className="flex items-center gap-1 rounded-full bg-blue-50 px-3 py-1 text-xs text-blue-700 border border-blue-100">
+            <Timeline aria-hidden />
+            Workshop · Finals
           </span>
         </div>
 
@@ -61,8 +60,8 @@ function DeckPreview() {
             </Badge>
           </div>
           <p className="text-caption text-muted-foreground">
-            Pitch template for Round 1, Round 2, and Finals — built to keep your story
-            consistent across every stage.
+            The workshop deck plus finals pitch support, all available as original
+            PowerPoint downloads.
           </p>
         </div>
 
@@ -92,15 +91,16 @@ function DeckPreview() {
           </Button>
         </div>
 
-        <p className="flex items-center gap-2 border-t border-border pt-4 text-caption text-muted-foreground">
+        <p className="flex flex-wrap items-center gap-2 border-t border-border pt-4 text-caption text-muted-foreground">
           <FileText className="size-3.5 shrink-0" aria-hidden />
-          Also here:{' '}
-          <Link
-            href="/deck"
+          Also here:
+          <a
+            href={WORKSHOP_DECK.finalFileHref}
+            download
             className="rounded-xs font-medium text-foreground underline underline-offset-4 hover:text-accent-text"
           >
-            a {DECK_SLIDES.length}-slide pitch template
-          </Link>
+            {WORKSHOP_DECK.finalFileName}
+          </a>
         </p>
       </div>
     </div>

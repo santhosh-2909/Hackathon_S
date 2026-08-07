@@ -7,7 +7,6 @@ const PAGES: CommandEntry[] = [
   { id: 'problems', label: 'Problem statements', href: '/problems', hint: '10 entries' },
   { id: 'build-your-own', label: 'Build your own idea', href: '/build-your-own' },
   { id: 'workshop', label: 'Technical workshop deck', href: '/workshop', hint: '72 slides' },
-  { id: 'deck', label: 'Pitch deck template', href: '/deck', hint: '7 slides' },
   { id: 'playbook', label: 'Playbook', href: '/playbook' },
 ];
 

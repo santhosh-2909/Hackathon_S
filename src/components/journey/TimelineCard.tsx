@@ -41,22 +41,22 @@ const ICON_MAP: Record<string, React.ElementType> = {
 const ACCENT_STYLES = [
   {
     borderHover: 'hover:border-[#2563EB]/50 hover:shadow-[0_12px_30px_rgba(37,99,235,0.1)]',
-    leftBorder: 'border-l-4 border-l-[#2563EB]',
+    leftBorderLg: 'lg:border-l-4 lg:border-l-[#2563EB]',
     accentText: 'text-[#2563EB]',
   },
   {
     borderHover: 'hover:border-[#0891B2]/50 hover:shadow-[0_12px_30px_rgba(8,145,178,0.1)]',
-    leftBorder: 'border-l-4 border-l-[#0891B2]',
+    leftBorderLg: 'lg:border-l-4 lg:border-l-[#0891B2]',
     accentText: 'text-[#0891B2]',
   },
   {
     borderHover: 'hover:border-[#0F9F8C]/50 hover:shadow-[0_12px_30px_rgba(15,159,140,0.1)]',
-    leftBorder: 'border-l-4 border-l-[#0F9F8C]',
+    leftBorderLg: 'lg:border-l-4 lg:border-l-[#0F9F8C]',
     accentText: 'text-[#0F9F8C]',
   },
   {
     borderHover: 'hover:border-[#D97706]/50 hover:shadow-[0_12px_30px_rgba(217,119,6,0.1)]',
-    leftBorder: 'border-l-4 border-l-[#D97706]',
+    leftBorderLg: 'lg:border-l-4 lg:border-l-[#D97706]',
     accentText: 'text-[#B45309]',
   },
 ];
@@ -82,7 +82,10 @@ export function TimelineCard({ milestone, index, className }: TimelineCardProps)
           className={cn(
             'group cursor-pointer relative flex-1 p-6 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 transition-all duration-300 shadow-2xs flex flex-col justify-between overflow-hidden',
             accent.borderHover,
-            accent.leftBorder
+            // Only show the accent left border at large viewports so it doesn't
+            // collide with the vertical timeline line on mobile.
+            // `leftBorderLg` contains the `lg:` prefix.
+            accent.leftBorderLg
           )}
         >
           {/* Card Top Section: Small Monochrome Icon + Date */}

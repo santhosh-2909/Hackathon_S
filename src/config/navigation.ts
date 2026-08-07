@@ -30,7 +30,6 @@ export const MARKETING_NAV: NavItem[] = [
   { href: '/build-your-own', label: 'Build Your Own Problem' },
   { href: '/#the-stack', label: 'Stack' },
   { href: '/workshop', label: 'Workshop' },
-  { href: '/deck', label: 'Deck' },
   { href: '/playbook', label: 'Playbook' },
 ];
 
@@ -101,7 +100,6 @@ export const FOOTER_NAV: { title: string; items: NavItem[] }[] = [
       { href: '/problems?domain=healthcare', label: 'Healthcare' },
       { href: '/problems?domain=aiml', label: 'AI / ML' },
       { href: '/problems?domain=cybersecurity', label: 'Cybersecurity' },
-      { href: '/deck', label: 'Pitch deck template' },
     ],
   },
   {

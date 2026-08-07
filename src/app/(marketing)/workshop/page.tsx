@@ -68,10 +68,10 @@ export default function WorkshopPage() {
             </a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link href="/deck">
-              Pitch template
-              <ArrowRight aria-hidden />
-            </Link>
+            <a href={WORKSHOP_DECK.finalFileHref} download>
+              <Download aria-hidden />
+              Download Finals pitch
+            </a>
           </Button>
         </div>
       </header>

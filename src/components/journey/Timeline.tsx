@@ -106,10 +106,10 @@ export function Timeline() {
       </div>
 
       {/* MOBILE VERTICAL TIMELINE STACK */}
-      <div className="lg:hidden relative mb-12 pl-6 border-l-2 border-slate-200 dark:border-slate-800 space-y-8">
+      <div className="lg:hidden relative mb-16 pl-8 border-l-2 border-slate-200 dark:border-slate-800 space-y-8">
         {milestones.map((m, idx) => (
           <div key={m.id} className="relative">
-            <div className="absolute -left-[31px] top-0">
+            <div className="absolute -left-[36px] top-0">
               <TimelineNode milestone={m} index={idx} />
             </div>
             <div className="pt-2">

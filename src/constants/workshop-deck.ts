@@ -18,6 +18,8 @@ export const WORKSHOP_DECK = {
   fileHref: '/decks/hackathon-technical-workshop-v2.pptx',
   fileName: 'hackathon-technical-workshop-v2.pptx',
   fileSizeMb: 2.7,
+  finalFileHref: '/decks/Final_pres.pptx',
+  finalFileName: 'Final_pres.pptx',
 } as const;
 
 export interface WorkshopModule {
