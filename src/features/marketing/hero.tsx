@@ -33,8 +33,8 @@ function Hero() {
             <p className="text-xs text-slate-500">Use this final template for your Finals pitch. Do not modify the template — changing the template may lead to disqualification.</p>
           </div>
           <div className="ml-auto">
-            <Button asChild size="lg" className="h-10 px-4">
-              <a href={WORKSHOP_DECK.finalFileHref} download>
+            <Button asChild size="lg" className="h-10 px-4 bg-sky-600 text-white hover:bg-sky-700">
+              <a href={WORKSHOP_DECK.finalFileHref} download aria-label="Download Final presentation">
                 Download Final_pres.pptx
               </a>
             </Button>
