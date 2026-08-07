@@ -88,6 +88,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Skip to content
               </a>
+              {/* Watermark background (pointer-events-none so it doesn't block interaction) */}
+              <div className="pointer-events-none fixed inset-0 -z-10 flex items-center justify-center">
+                <img
+                  src="/imagery/kira-logo.svg"
+                  alt="Kira watermark"
+                  className="max-w-[1200px] w-2/3 object-contain transform -translate-y-12 rotate-[-12deg]"
+                  style={{ opacity: 0.06 }}
+                />
+              </div>
+
+              {/* Fixed top-left logo for quick navigation */}
+              <a
+                href="/"
+                aria-label={`${siteConfig.name} home`}
+                className="fixed top-4 left-4 z-50 rounded-md p-1 bg-white/70 dark:bg-black/60 backdrop-blur-sm shadow-md"
+              >
+                <img src="/imagery/kira-logo.svg" alt={siteConfig.name} className="w-10 h-10 object-contain" />
+              </a>
               {children}
               <Toaster />
             </TooltipProvider>
