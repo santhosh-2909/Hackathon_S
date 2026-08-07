@@ -24,6 +24,12 @@ const SIGNALS = [
 function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(79,70,229,0.12),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(251,146,60,0.14),_transparent_30%)]" />
+        <div className="absolute inset-0 flex items-center justify-center opacity-10">
+          <img src="/imagery/kira-logo.svg" alt="" aria-hidden="true" className="max-h-[260px] max-w-[260px] object-contain" />
+        </div>
+      </div>
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] blueprint-grid mask-fade-b opacity-[0.55]"

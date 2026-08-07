@@ -29,7 +29,7 @@ function Logo({
     >
       <span className="grid size-7 shrink-0 place-items-center rounded-md bg-transparent text-primary-foreground">
         <Image
-          src="/imagery/kira-logo.png"
+          src="/imagery/kira-logo.svg"
           alt={siteConfig.name}
           width={40}
           height={40}
