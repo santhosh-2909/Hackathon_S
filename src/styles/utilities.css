@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Project utilities
+   --------------------------------------------------------------------------
+   Only patterns that repeat across features and cannot be expressed as a short
+   utility chain live here. Anything used once stays inline in the component.
+   ========================================================================== */
+
+/* Page gutter + measure. Every full-width band uses this so the left edge of
+   content lines up from the navbar to the footer. */
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem; /* 1280 */
+  padding-inline: 1.25rem;
+
+  @media (width >= 37.5rem) {
+    padding-inline: 2rem;
+  }
+
+  @media (width >= 64rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Reading measure for long-form copy. */
+@utility container-prose {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 44rem;
+}
+
+/* Section rhythm — the single vertical spacing decision on marketing pages. */
+@utility section-y {
+  padding-block: 4rem;
+
+  @media (width >= 51.25rem) {
+    padding-block: 6rem;
+  }
+
+  @media (width >= 85.375rem) {
+    padding-block: 7.5rem;
+  }
+}
+
+@utility section-y-sm {
+  padding-block: 2.5rem;
+
+  @media (width >= 51.25rem) {
+    padding-block: 3.5rem;
+  }
+}
+
+/* Eyebrow / overline label. */
+@utility overline {
+  font-size: var(--text-overline);
+  line-height: var(--text-overline--line-height);
+  letter-spacing: var(--text-overline--letter-spacing);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Blueprint hairline grid — the one decorative texture in the system. Sits
+   behind hero and empty-state surfaces at very low contrast. */
+@utility blueprint-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  background-position: center center;
+}
+
+/* Fade a scrolling strip into the surface at both ends. */
+@utility mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+@utility mask-fade-b {
+  mask-image: linear-gradient(to bottom, black 55%, transparent);
+}
+
+/* Scroll container that keeps keyboard scrolling but drops the visual bar. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Anchor for `absolute` shimmer overlays on skeletons. */
+@utility shimmer-surface {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in oklab, var(--foreground) 6%, transparent),
+      transparent
+    );
+    animation: var(--animate-shimmer);
+  }
+}
+
+/* Skip link: off-canvas until focused. */
+@utility skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  transition: transform 160ms var(--ease-standard);
+
+  &:focus-visible {
+    transform: translateY(0);
+  }
+}

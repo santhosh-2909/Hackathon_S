@@ -1,0 +1,21 @@
+/* `source(none)` disables automatic source detection, which otherwise walks up to
+   the nearest git root — several unrelated projects and a 500MB archive live
+   there, and scanning them made the dev server's class detection unreliable
+   (newly added utilities silently failed to compile). The explicit `@source`
+   lines below are the whole scan surface. */
+@import 'tailwindcss' source(none);
+@import 'tw-animate-css';
+
+@import './tokens.css';
+@import './base.css';
+@import './utilities.css';
+
+/* next-themes writes `class="dark"` on <html>; bind Tailwind's dark variant to it
+   rather than to the media query so the in-app theme toggle is authoritative. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tell the compiler where to scan. Explicit sources keep the safelist tight now
+   that there is no `content` array in a config file. */
+@source '../app';
+@source '../components';
+@source '../features';

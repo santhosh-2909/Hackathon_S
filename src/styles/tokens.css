@@ -1,0 +1,460 @@
+/* ==========================================================================
+   Kira Workshop — Design tokens
+   --------------------------------------------------------------------------
+   Single source of truth for colour, type, space, radius, elevation, motion.
+   Every value is authored once here as a CSS custom property, then exposed to
+   Tailwind through `@theme inline` so `bg-surface`, `text-h1`, `rounded-lg`
+   and friends resolve to the same variable the raw CSS uses.
+
+   Colour is authored in OKLCH for perceptual evenness. The chart slots are the
+   one exception — they are hex, copied verbatim from a validated categorical
+   palette (see docs/DESIGN-SYSTEM.md § Charts). Do not "tidy" them into OKLCH:
+   the validator report is keyed to those exact values.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* --- Surfaces & ink ----------------------------------------------------
+     The page plane is a warm paper cream; cards are plain white on top of it.
+     That inversion — tinted page, neutral card — is what gives the marketing
+     surface its warmth without tinting any content. */
+  --canvas: oklch(0.97 0.033 100);
+  --background: oklch(0.97 0.033 100);
+  --foreground: oklch(0.165 0.012 95);
+
+  --surface: oklch(1 0 0);
+  --surface-raised: oklch(1 0 0);
+  --surface-sunken: oklch(0.945 0.032 100);
+  --surface-inverse: oklch(0.165 0.012 95);
+  --surface-inverse-foreground: oklch(0.9851 0.0012 264);
+
+  --muted: oklch(0.945 0.03 100);
+  --muted-foreground: oklch(0.435 0.015 95);
+  /* Stepped to clear 4.5:1 against the darkest light plane it sits on
+     (--surface-sunken), because it carries caption-size text. */
+  --subtle-foreground: oklch(0.505 0.013 95);
+
+  --border: oklch(0.87 0.018 100);
+  /* Both of these bound a control rather than decorate it, so they carry the
+     3:1 that WCAG 1.4.11 requires — `--border-strong` against the cream page,
+     `--input` against the white card a field actually sits on. */
+  --border-strong: oklch(0.647 0.022 100);
+  --input: oklch(0.6685 0.02 100);
+
+  /* --- Brand & interaction ----------------------------------------------- */
+  --primary: oklch(0.19 0.012 95);
+  --primary-foreground: oklch(0.9851 0.0012 264);
+  --primary-hover: oklch(0.27 0.013 95);
+
+  --secondary: oklch(0.945 0.03 100);
+  --secondary-foreground: oklch(0.23 0.012 95);
+
+  /* Violet. Reserved for emphasis, active state and the focus ring — never used
+     as a page-wide wash.
+
+     Four steps, same hue, following the pattern the status colours use:
+     `--accent` is the saturated MARK step (chart marks, the ring);
+     `--accent-text` is the darker INK step, clearing 4.5:1 on every light plane
+     including --accent-surface; `--accent-soft` is the pale BUTTON FILL that
+     carries near-black text, with `--accent-soft-border` giving that fill the
+     3:1 boundary WCAG 1.4.11 requires against the cream page. */
+  --accent: oklch(0.48 0.22 295);
+  --accent-foreground: oklch(0.9925 0 0);
+  --accent-hover: oklch(0.42 0.22 295);
+  --accent-text: oklch(0.45 0.22 295);
+  /* Accent as ink on --surface-inverse. Inverted panels flip lightness between
+     modes, so this step flips with them; the plain accent would fail on one
+     side or the other. */
+  --accent-on-inverse: oklch(0.78 0.13 300);
+  --accent-soft: oklch(0.84 0.095 300);
+  --accent-soft-foreground: oklch(0.19 0.05 300);
+  --accent-soft-border: oklch(0.61 0.15 300);
+  --accent-soft-hover: oklch(0.79 0.11 300);
+  --accent-surface: oklch(0.942 0.04 300);
+  --accent-border: oklch(0.84 0.08 300);
+
+  --ring: oklch(0.48 0.22 295);
+  --overlay: oklch(0.165 0.012 95 / 0.5);
+
+  /* --- Semantic status ---------------------------------------------------
+     Marks use the reserved status palette; the `-foreground` step is the
+     contrast-corrected text colour for the same meaning. Status never travels
+     on colour alone — every consumer pairs it with an icon and a label. */
+  --success: #0ca30c;
+  --success-foreground: #006300;
+  --success-surface: oklch(0.9631 0.0364 155);
+  --success-border: oklch(0.8703 0.0762 155);
+
+  --warning: #fab219;
+  --warning-foreground: #7a5200;
+  --warning-surface: oklch(0.9741 0.0396 85);
+  --warning-border: oklch(0.8899 0.0863 82);
+
+  --danger: #d03b3b;
+  --danger-foreground: #a5231f;
+  --danger-surface: oklch(0.9629 0.0234 25);
+  --danger-border: oklch(0.8836 0.0561 25);
+
+  --info: #2a78d6;
+  --info-foreground: #175cd3;
+  --info-surface: oklch(0.9631 0.0231 250);
+  --info-border: oklch(0.8703 0.0596 250);
+
+  /* --- Charts ------------------------------------------------------------
+     Categorical slots are assigned in fixed order and never cycled. Views that
+     would need a 4th slot fold the tail into "Other" or facet instead. */
+  --chart-1: #2a78d6;
+  --chart-2: #eb6834;
+  --chart-3: #1baf7a;
+  --chart-grid: oklch(0.9358 0.0038 265);
+  --chart-axis: oklch(0.8613 0.0067 265);
+  --chart-surface: oklch(1 0 0);
+
+  /* --- Elevation ---------------------------------------------------------
+     Two-part shadows: a tight contact shadow plus a wide ambient one. */
+  --shadow-color: 265 24% 12%;
+  --elevation-1: 0 1px 2px -1px hsl(var(--shadow-color) / 0.09);
+  --elevation-2:
+    0 1px 2px -1px hsl(var(--shadow-color) / 0.08), 0 3px 8px -3px hsl(var(--shadow-color) / 0.08);
+  --elevation-3:
+    0 1px 2px -1px hsl(var(--shadow-color) / 0.07), 0 8px 20px -6px hsl(var(--shadow-color) / 0.12);
+  --elevation-4:
+    0 2px 4px -2px hsl(var(--shadow-color) / 0.08),
+    0 18px 40px -12px hsl(var(--shadow-color) / 0.16);
+  --elevation-5:
+    0 4px 8px -4px hsl(var(--shadow-color) / 0.1), 0 32px 64px -20px hsl(var(--shadow-color) / 0.22);
+}
+
+.dark {
+  color-scheme: dark;
+
+  --canvas: oklch(0.1477 0.0092 265);
+  --background: oklch(0.1477 0.0092 265);
+  --foreground: oklch(0.9653 0.0031 265);
+
+  --surface: oklch(0.1837 0.0101 265);
+  --surface-raised: oklch(0.2144 0.011 265);
+  --surface-sunken: oklch(0.1662 0.0096 265);
+  --surface-inverse: oklch(0.9653 0.0031 265);
+  --surface-inverse-foreground: oklch(0.1477 0.0092 265);
+
+  --muted: oklch(0.2337 0.0116 265);
+  --muted-foreground: oklch(0.6885 0.0125 265);
+  --subtle-foreground: oklch(0.5885 0.0126 265);
+
+  --border: oklch(0.2758 0.0125 265);
+  --border-strong: oklch(0.3506 0.0139 265);
+  --input: oklch(0.3105 0.0132 265);
+
+  --primary: oklch(0.9653 0.0031 265);
+  --primary-foreground: oklch(0.1662 0.0096 265);
+  --primary-hover: oklch(0.8837 0.0055 265);
+
+  --secondary: oklch(0.2337 0.0116 265);
+  --secondary-foreground: oklch(0.9653 0.0031 265);
+
+  --accent: oklch(0.72 0.15 300);
+  --accent-foreground: oklch(0.1477 0.0092 265);
+  --accent-hover: oklch(0.78 0.13 300);
+  /* On dark the mark step already clears 4.5:1 as ink, so both roles share it. */
+  --accent-text: oklch(0.72 0.15 300);
+  --accent-on-inverse: oklch(0.505 0.19 295);
+  /* The pale fill does not flip: a bright lavender button reads correctly on
+     both a cream page and a near-black one, and its near-black ink travels with
+     it. Flipping it would make the primary CTA change character between themes. */
+  --accent-soft: oklch(0.86 0.078 300);
+  --accent-soft-foreground: oklch(0.21 0.04 300);
+  --accent-soft-border: oklch(0.6645 0.12 300);
+  --accent-soft-hover: oklch(0.9 0.06 300);
+  --accent-surface: oklch(0.2543 0.0509 300);
+  --accent-border: oklch(0.3714 0.0928 300);
+
+  --ring: oklch(0.72 0.15 300);
+  --overlay: oklch(0.0937 0.0064 265 / 0.68);
+
+  --success: #0ca30c;
+  --success-foreground: #4ac94a;
+  --success-surface: oklch(0.2521 0.0499 155);
+  --success-border: oklch(0.3597 0.0771 155);
+
+  --warning: #fab219;
+  --warning-foreground: #f0b73c;
+  --warning-surface: oklch(0.2632 0.0468 85);
+  --warning-border: oklch(0.3714 0.0724 82);
+
+  --danger: #d03b3b;
+  --danger-foreground: #f28b85;
+  --danger-surface: oklch(0.2543 0.0509 25);
+  --danger-border: oklch(0.3714 0.0805 25);
+
+  --info: #3987e5;
+  --info-foreground: #7db2f0;
+  --info-surface: oklch(0.2543 0.0509 250);
+  --info-border: oklch(0.3714 0.0805 250);
+
+  --chart-1: #3987e5;
+  --chart-2: #d95926;
+  --chart-3: #199e70;
+  --chart-grid: oklch(0.2543 0.0119 265);
+  --chart-axis: oklch(0.3506 0.0139 265);
+  --chart-surface: oklch(0.1837 0.0101 265);
+
+  --shadow-color: 265 60% 2%;
+  --elevation-1: 0 1px 2px -1px hsl(var(--shadow-color) / 0.5);
+  --elevation-2:
+    0 1px 2px -1px hsl(var(--shadow-color) / 0.5), 0 3px 8px -3px hsl(var(--shadow-color) / 0.5);
+  --elevation-3:
+    0 1px 2px -1px hsl(var(--shadow-color) / 0.5), 0 8px 20px -6px hsl(var(--shadow-color) / 0.6);
+  --elevation-4:
+    0 2px 4px -2px hsl(var(--shadow-color) / 0.5), 0 18px 40px -12px hsl(var(--shadow-color) / 0.7);
+  --elevation-5:
+    0 4px 8px -4px hsl(var(--shadow-color) / 0.5), 0 32px 64px -20px hsl(var(--shadow-color) / 0.8);
+}
+
+/* ==========================================================================
+   Tailwind theme bridge
+   ========================================================================== */
+
+@theme inline {
+  /* --- Colour ------------------------------------------------------------ */
+  --color-canvas: var(--canvas);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-surface-inverse: var(--surface-inverse);
+  --color-surface-inverse-foreground: var(--surface-inverse-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle-foreground: var(--subtle-foreground);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-overlay: var(--overlay);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-text: var(--accent-text);
+  --color-accent-on-inverse: var(--accent-on-inverse);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-soft-foreground: var(--accent-soft-foreground);
+  --color-accent-soft-border: var(--accent-soft-border);
+  --color-accent-soft-hover: var(--accent-soft-hover);
+  --color-accent-surface: var(--accent-surface);
+  --color-accent-border: var(--accent-border);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-surface: var(--success-surface);
+  --color-success-border: var(--success-border);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-surface: var(--warning-surface);
+  --color-warning-border: var(--warning-border);
+
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-danger-surface: var(--danger-surface);
+  --color-danger-border: var(--danger-border);
+
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-info-surface: var(--info-surface);
+  --color-info-border: var(--info-border);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-grid: var(--chart-grid);
+  --color-chart-axis: var(--chart-axis);
+  --color-chart-surface: var(--chart-surface);
+
+  /* --- Type -------------------------------------------------------------- */
+  --font-sans:
+    var(--font-sans-family), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: var(--font-mono-family), ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  /* Variable display serif, display sizes only. Never used below ~1.5rem — the
+     optical-size axis is tuned for headline weights, not running text. */
+  --font-display: var(--font-display-family), 'Iowan Old Style', Georgia, serif;
+
+  /* Hero step. Serif needs far less negative tracking than the sans display
+     sizes; -0.04em would collapse the thin joins. */
+  --text-hero: clamp(3rem, 1.6rem + 6.4vw, 7rem);
+  --text-hero--line-height: 1;
+  --text-hero--letter-spacing: -0.02em;
+  --text-hero--font-weight: 400;
+
+  --text-display-2xl: clamp(2.75rem, 1.55rem + 5vw, 5.25rem);
+  --text-display-2xl--line-height: 0.95;
+  --text-display-2xl--letter-spacing: -0.042em;
+  --text-display-2xl--font-weight: 600;
+
+  --text-display-xl: clamp(2.25rem, 1.5rem + 3.4vw, 4rem);
+  --text-display-xl--line-height: 1;
+  --text-display-xl--letter-spacing: -0.036em;
+  --text-display-xl--font-weight: 600;
+
+  --text-display-lg: clamp(1.875rem, 1.35rem + 2.3vw, 3rem);
+  --text-display-lg--line-height: 1.06;
+  --text-display-lg--letter-spacing: -0.03em;
+  --text-display-lg--font-weight: 600;
+
+  --text-h1: clamp(1.75rem, 1.35rem + 1.7vw, 2.5rem);
+  --text-h1--line-height: 1.12;
+  --text-h1--letter-spacing: -0.026em;
+  --text-h1--font-weight: 600;
+
+  --text-h2: clamp(1.4375rem, 1.2rem + 1.1vw, 2rem);
+  --text-h2--line-height: 1.18;
+  --text-h2--letter-spacing: -0.021em;
+  --text-h2--font-weight: 600;
+
+  --text-h3: clamp(1.1875rem, 1.08rem + 0.55vw, 1.5rem);
+  --text-h3--line-height: 1.26;
+  --text-h3--letter-spacing: -0.015em;
+  --text-h3--font-weight: 600;
+
+  --text-h4: 1.125rem;
+  --text-h4--line-height: 1.36;
+  --text-h4--letter-spacing: -0.011em;
+  --text-h4--font-weight: 600;
+
+  --text-h5: 1rem;
+  --text-h5--line-height: 1.42;
+  --text-h5--letter-spacing: -0.006em;
+  --text-h5--font-weight: 600;
+
+  --text-h6: 0.875rem;
+  --text-h6--line-height: 1.44;
+  --text-h6--letter-spacing: 0em;
+  --text-h6--font-weight: 600;
+
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.65;
+  --text-body-lg--letter-spacing: -0.008em;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.65;
+  --text-body--letter-spacing: -0.004em;
+
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.6;
+  --text-body-sm--letter-spacing: 0em;
+
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.5;
+  --text-caption--letter-spacing: 0.004em;
+
+  --text-overline: 0.75rem;
+  --text-overline--line-height: 1.2;
+  --text-overline--letter-spacing: 0.14em;
+  --text-overline--font-weight: 600;
+
+  /* --- Radius ------------------------------------------------------------ */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.75rem;
+
+  /* --- Elevation --------------------------------------------------------- */
+  --shadow-e1: var(--elevation-1);
+  --shadow-e2: var(--elevation-2);
+  --shadow-e3: var(--elevation-3);
+  --shadow-e4: var(--elevation-4);
+  --shadow-e5: var(--elevation-5);
+
+  /* --- Motion ------------------------------------------------------------
+     Restrained by brief: entrances travel a short distance on a decelerating
+     curve; nothing overshoots or bounces. */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  --animate-fade-in: fade-in 240ms var(--ease-standard) both;
+  --animate-rise: rise 320ms var(--ease-standard) both;
+  --animate-marquee: marquee 42s linear infinite;
+  --animate-shimmer: shimmer 1.6s var(--ease-standard) infinite;
+  --animate-accordion-down: accordion-down 220ms var(--ease-standard);
+  --animate-accordion-up: accordion-up 180ms var(--ease-standard);
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 0.75rem, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* --- Breakpoints -------------------------------------------------------
+     Aligned to the 2025-26 viewport matrix the product is validated against. */
+  --breakpoint-xs: 25.875rem; /* 414 — large phones */
+  --breakpoint-sm: 37.5rem; /* 600 — foldable / small tablet */
+  --breakpoint-md: 51.25rem; /* 820 — tablet portrait */
+  --breakpoint-lg: 64rem; /* 1024 — tablet landscape */
+  --breakpoint-xl: 85.375rem; /* 1366 — laptop */
+  --breakpoint-2xl: 90rem; /* 1440 — desktop */
+  --breakpoint-3xl: 120rem; /* 1920 — wide desktop */
+}

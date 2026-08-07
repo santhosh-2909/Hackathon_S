@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Base layer — element defaults, focus policy, motion policy
+   ========================================================================== */
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Sticky headers must not cover the target of an in-page anchor. */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis-weight: none;
+  }
+
+  /* One focus treatment, everywhere. Keyboard-only by default; components that
+     need a persistent ring opt in with `focus-ring-always`. */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  /* Headings inherit their scale from utilities, not from the element, so a
+     visually-smaller heading never forces a semantic downgrade. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  hr {
+    border-color: var(--border);
+  }
+
+  /* Inputs inherit the type ramp; the browser default 13.3px monospace is never
+     what we want. */
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+  }
+
+  ::placeholder {
+    color: var(--subtle-foreground);
+  }
+
+  /* Numeric columns align; standalone display numbers stay proportional. */
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  /* Respect the OS reduced-motion setting globally. Individual components do not
+     need to re-implement this. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Windows High Contrast / forced-colors: keep affordance boundaries visible. */
+  @media (forced-colors: active) {
+    * {
+      forced-color-adjust: auto;
+    }
+  }
+}
