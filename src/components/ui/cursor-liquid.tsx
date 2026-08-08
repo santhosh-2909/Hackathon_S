@@ -16,6 +16,7 @@ export default function CursorLiquid() {
     const particles: Array<any> = [];
 
     function resize() {
+      if (!canvas) return;
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
     }
