@@ -57,17 +57,17 @@ function MarketingHeader() {
           gains a surface and a shadow once the page scrolls under it. */}
       <div
         className={cn(
-          'mx-auto flex h-[72px] max-w-6xl items-center gap-5 rounded-[24px] border border-slate-200/80 dark:border-slate-800 px-5 sm:px-6 shadow-md backdrop-blur-xl',
+          'mx-auto flex h-[68px] max-w-7xl items-center gap-4 rounded-[22px] border border-slate-200/80 px-4 shadow-md backdrop-blur-xl sm:px-5 dark:border-slate-800',
           'transition-[background-color,border-color,box-shadow] duration-200 ease-in-out',
           scrolled
             ? 'bg-white/90 dark:bg-slate-900/90 shadow-lg'
             : 'bg-white/75 dark:bg-slate-900/75',
         )}
       >
-        <Logo />
+        <Logo className="shrink-0" />
 
-        <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+        <nav aria-label="Primary" className="hidden min-w-0 flex-1 xl:block">
+          <ul className="flex items-center justify-center gap-1">
             {MARKETING_NAV.map((item) => {
               const active = isRouteActive(item.href, pathname);
               return (
@@ -106,13 +106,13 @@ function MarketingHeader() {
 
           <ThemeToggle />
 
-          <span aria-hidden className="mx-1 hidden h-6 w-px bg-slate-200 dark:bg-slate-800 lg:block" />
+          <span aria-hidden className="mx-1 hidden h-6 w-px bg-slate-200 dark:bg-slate-800 xl:block" />
 
           {/* Desktop CTA removed as requested. Mobile menu still contains links. */}
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Open menu">
+              <Button variant="ghost" size="icon" className="xl:hidden" aria-label="Open menu">
                 <Menu aria-hidden />
               </Button>
             </SheetTrigger>

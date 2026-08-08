@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-
 import { Button } from '@/components/ui/button';
 
 function CtaBand() {
@@ -16,12 +14,6 @@ function CtaBand() {
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button asChild size="lg" variant="accent">
-            <Link href="/build-your-own">
-              Build your own idea
-              <ArrowRight aria-hidden />
-            </Link>
-          </Button>
           <Button
             asChild
             size="lg"

@@ -112,9 +112,6 @@ export default async function ProblemDetailPage({ params }: { params: Params }) 
           <p className="text-body-lg text-muted-foreground">{problem.summary}</p>
 
           <div className="flex flex-wrap gap-3 pt-2">
-            <Button asChild>
-              <Link href="/build-your-own">Build your own idea</Link>
-            </Button>
             <Button asChild variant="outline">
               <Link href={`/problems?domain=${problem.domain}`}>
                 More in {domain.label}

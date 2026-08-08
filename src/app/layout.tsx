@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Fraunces, JetBrains_Mono, Plus_Jakarta_Sans } from 'next/font/google';
+import Image from 'next/image';
 
 import '@/styles/globals.css';
 
@@ -10,7 +11,6 @@ import { QueryProvider } from '@/providers/query-provider';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Toaster } from '@/components/ui/toaster';
 import CursorLiquid from '@/components/ui/cursor-liquid';
-import { Logo } from '@/components/layout/logo';
 
 const sans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -92,22 +92,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </a>
               {/* Watermark background (pointer-events-none so it doesn't block interaction) */}
               <div className="pointer-events-none fixed inset-0 -z-20 flex items-center justify-center">
-                <img
-                  src="/imagery/kira-logo-new.png"
-                  alt="Kira watermark"
-                  className="max-w-[900px] w-1/2 object-contain transform -translate-y-8 rotate-[-8deg]"
+                <Image
+                  src="/imagery/kira-logo-wide.png"
+                  alt=""
+                  aria-hidden
+                  width={1024}
+                  height={600}
+                  className="h-auto w-1/2 max-w-[900px] -translate-y-8 rotate-[-8deg] object-contain"
                   style={{ opacity: 0.04 }}
                 />
-              </div>
-
-              {/* Fixed top-left logo — uses Logo component; reveals wordmark on hover */}
-              <div className="fixed top-4 left-4 z-50">
-                <div className="group flex items-center gap-2 rounded-full bg-white/90 dark:bg-black/70 p-1 pr-3 shadow-md backdrop-blur-sm">
-                  <Logo className="p-1 rounded-full" showWordmark={false} />
-                  <span className="hidden group-hover:inline-block text-h4 font-semibold text-primary-foreground dark:text-primary-foreground">
-                    {siteConfig.name}
-                  </span>
-                </div>
               </div>
               {/* Liquid cursor / grid effect overlay (above watermark) */}
               <CursorLiquid />

@@ -27,7 +27,6 @@ export interface NavItem {
 export const MARKETING_NAV: NavItem[] = [
   { href: '/problems', label: 'Problem statements' },
   { href: '/project-journey', label: 'Timeline' },
-  { href: '/build-your-own', label: 'Build Your Own Problem' },
   { href: '/#the-stack', label: 'Stack' },
   { href: '/workshop', label: 'Workshop' },
   { href: '/playbook', label: 'Playbook' },
@@ -105,7 +104,6 @@ export const FOOTER_NAV: { title: string; items: NavItem[] }[] = [
   {
     title: 'Resources',
     items: [
-      { href: '/build-your-own', label: 'Build your own idea' },
       { href: '/playbook', label: 'Playbook' },
       { href: '/workshop', label: 'Workshop deck' },
     ],

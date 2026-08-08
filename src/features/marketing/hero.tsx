@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Compass } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -16,8 +17,7 @@ const SIGNALS = [
 /**
  * Hero. Server-rendered — the only client code on first paint is the header.
  *
- * Text-only by design: the LCP element is the headline, so there is no image to
- * preload and nothing above the fold that can shift. The single decorative
+ * The LCP element remains the headline. The single decorative
  * layer is a hairline grid that fades out well before it reaches the type — it
  * is behind `-z-10` and `aria-hidden`, so it can never intercept a pointer or
  * reach the accessibility tree.
@@ -44,7 +44,14 @@ function Hero() {
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(79,70,229,0.12),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(251,146,60,0.14),_transparent_30%)]" />
         <div className="absolute inset-0 flex items-center justify-center opacity-10">
-          <img src="/imagery/kira-logo.svg" alt="" aria-hidden="true" className="max-h-[260px] max-w-[260px] object-contain" />
+          <Image
+            src="/imagery/kira-logo-wide.png"
+            alt=""
+            aria-hidden
+            width={1024}
+            height={600}
+            className="h-auto w-[min(34rem,72vw)] object-contain"
+          />
         </div>
       </div>
       <div

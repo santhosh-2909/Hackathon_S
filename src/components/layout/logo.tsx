@@ -4,11 +4,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { siteConfig } from '@/config/site';
 
-/**
- * Wordmark. The glyph is a caret — the shell prompt the brand voice is built
- * around — drawn in SVG rather than shipped as an image so it inherits colour
- * and stays crisp at every density.
- */
+/** Branded home link used by the marketing header and workspace shell. */
 function Logo({
   className,
   href = '/',
@@ -22,23 +18,21 @@ function Logo({
     <Link
       href={href}
       className={cn(
-        'group inline-flex items-center gap-2.5 rounded-md focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none',
+        'inline-flex items-center rounded-md focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none',
         className,
       )}
       aria-label={`${siteConfig.name} home`}
     >
-        <span className="grid size-7 shrink-0 place-items-center rounded-md bg-transparent text-primary-foreground">
+      <span className={cn('block shrink-0', showWordmark ? 'h-11 w-[7.5rem]' : 'size-10')}>
         <Image
-          src="/imagery/kira-logo-new.png"
-          alt={siteConfig.name}
-          width={48}
-          height={48}
-          className="rounded-md object-contain"
+          src="/imagery/kira-logo-wide.png"
+          alt=""
+          width={1024}
+          height={600}
+          priority
+          className="h-full w-full object-contain"
         />
       </span>
-      {showWordmark ? (
-        <span className="text-h4 tracking-tight whitespace-nowrap">{siteConfig.name}</span>
-      ) : null}
     </Link>
   );
 }
