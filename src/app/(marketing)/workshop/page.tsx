@@ -64,13 +64,13 @@ export default function WorkshopPage() {
           <Button asChild variant="soft" size="lg">
             <a href={WORKSHOP_DECK.fileHref} download>
               <Download aria-hidden />
-              Download the deck
+              Download workshop deck
             </a>
           </Button>
           <Button asChild variant="outline" size="lg">
             <a href={WORKSHOP_DECK.finalFileHref} download>
               <Download aria-hidden />
-              Download Finals pitch
+              Download final pitch deck
             </a>
           </Button>
         </div>
