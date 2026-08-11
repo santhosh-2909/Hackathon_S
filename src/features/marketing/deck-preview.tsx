@@ -86,21 +86,20 @@ function DeckPreview() {
           <Button asChild variant="outline" size="md">
             <a href={WORKSHOP_DECK.fileHref} download>
               <Download aria-hidden />
-              Download
+              Download workshop deck
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="md">
+            <a href={WORKSHOP_DECK.finalFileHref} download>
+              <Download aria-hidden />
+              Download final pitch deck
             </a>
           </Button>
         </div>
 
         <p className="flex flex-wrap items-center gap-2 border-t border-border pt-4 text-caption text-muted-foreground">
           <FileText className="size-3.5 shrink-0" aria-hidden />
-          Also here:
-          <a
-            href={WORKSHOP_DECK.finalFileHref}
-            download
-            className="rounded-xs font-medium text-foreground underline underline-offset-4 hover:text-accent-text"
-          >
-            {WORKSHOP_DECK.finalFileName}
-          </a>
+          Downloads include the technical workshop deck and the final pitch deck.
         </p>
       </div>
     </div>
