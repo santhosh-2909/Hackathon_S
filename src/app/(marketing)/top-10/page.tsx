@@ -5,7 +5,6 @@ import {
   ArrowRight,
   Calendar,
   Sparkles,
-  PartyPopper,
   Crown,
   HeartHandshake,
   Award,
@@ -23,8 +22,8 @@ import {
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Top10Hero } from '@/features/top10/Top10Hero';
 
 export const metadata: Metadata = {
   title: 'Top 10 Finalists',
@@ -160,18 +159,7 @@ function TeamCard({ team }: { team: FinalistTeam }) {
 export default function Top10Page() {
   return (
     <div className="container-page flex flex-col gap-12 py-12 md:py-16">
-      <div className="mx-auto flex max-w-3xl flex-col items-center text-center gap-4">
-        <Badge variant="accent" size="md">
-          <PartyPopper className="size-3.5" />
-          Announcement
-        </Badge>
-        <h1 className="font-display text-display-lg">Top 10 Finalists!</h1>
-        <p className="text-body-lg text-muted-foreground max-w-2xl">
-          These 10 amazing teams have showcased outstanding{' '}
-          <span className="font-semibold text-foreground">creativity, innovation,</span> and hard
-          work to reach this stage!
-        </p>
-      </div>
+      <Top10Hero />
 
       <section className="mx-auto w-full max-w-5xl">
         <Card className="relative overflow-hidden border-primary/20 bg-gradient-to-b from-surface to-primary/5">

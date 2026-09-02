@@ -4,6 +4,7 @@ import * as React from 'react';
 import { RoadmapBackground } from '@/components/journey/RoadmapBackground';
 import { HeroSection } from '@/components/journey/HeroSection';
 import { Timeline } from '@/components/journey/Timeline';
+import { Top10Fab } from '@/components/journey/Top10Fab';
 
 export function ProjectJourney() {
   return (
@@ -18,6 +19,9 @@ export function ProjectJourney() {
         {/* Master Linear/Stripe Style Timeline Roadmap */}
         <Timeline />
       </div>
+
+      {/* Floating Top 10 Finalists launcher */}
+      <Top10Fab />
     </section>
   );
 }

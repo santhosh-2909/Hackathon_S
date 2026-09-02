@@ -33,11 +33,11 @@ export const INITIAL_MILESTONES: Milestone[] = [
     id: 'm2',
     stageName: 'ROUND 1',
     title: 'Solution Presentation',
-    date: '17 August 2026',
+    date: '21 August 2026',
     description:
       'Present your proposed solution, architecture and implementation strategy to the internal jury.',
-    status: 'Upcoming',
-    remainingDays: 10,
+    status: 'Completed',
+    remainingDays: null,
     iconName: 'Lightbulb',
     deliverables: [
       'Architecture & System Component Diagram',
@@ -58,11 +58,11 @@ export const INITIAL_MILESTONES: Milestone[] = [
     id: 'm3',
     stageName: 'ROUND 2',
     title: 'Top 7 Shortlisting',
-    date: '20 August 2026',
+    date: '31 August 2026',
     description:
       'The jury evaluates all projects and selects the seven strongest teams based on innovation, feasibility and execution.',
-    status: 'Upcoming',
-    remainingDays: 13,
+    status: 'Completed',
+    remainingDays: null,
     iconName: 'Trophy',
     deliverables: [
       'Working MVP / Interactive Web Prototype',

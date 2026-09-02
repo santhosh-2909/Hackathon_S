@@ -4,6 +4,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import type { Milestone } from '@/components/journey/types';
+import { getDaysRemaining } from '@/components/journey/dates';
 
 interface TimelineNodeProps {
   milestone: Milestone;
@@ -44,6 +45,24 @@ export function TimelineNode({ milestone, index, onClick, className }: TimelineN
   const colors = STAGE_COLORS[index % STAGE_COLORS.length] ?? STAGE_COLORS[0]!;
   const isCompleted = milestone.status === 'Completed';
 
+  // Recompute the exact days remaining whenever the calendar day changes so the
+  // "X Days Left" badge stays accurate daily without a full page reload.
+  const [, setDayTick] = React.useState(0);
+
+  React.useEffect(() => {
+    const now = new Date();
+    const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    const untilMidnight = nextMidnight.getTime() - now.getTime();
+
+    const timer = window.setTimeout(() => {
+      setDayTick((t) => t + 1);
+    }, untilMidnight + 1000);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  const daysLeft = getDaysRemaining(milestone.date);
+
   return (
     <div
       onClick={onClick}
@@ -78,7 +97,7 @@ export function TimelineNode({ milestone, index, onClick, className }: TimelineN
             colors.badge
           )}
         >
-          {isCompleted ? 'Completed' : `${milestone.remainingDays ?? 10} Days Left`}
+          {isCompleted ? 'Completed' : `${daysLeft} Days Left`}
         </span>
       </div>
     </div>

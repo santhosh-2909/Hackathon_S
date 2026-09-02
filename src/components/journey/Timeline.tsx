@@ -22,6 +22,7 @@ import { useTimelineProgress } from '@/hooks/useTimelineProgress';
 import { AnimatedProgress } from '@/components/journey/AnimatedProgress';
 import { TimelineNode } from '@/components/journey/TimelineNode';
 import { TimelineCard } from '@/components/journey/TimelineCard';
+import { parseMilestoneDate } from '@/components/journey/dates';
 import { Button } from '@/components/ui/button';
 import type { Milestone } from '@/components/journey/types';
 
@@ -45,21 +46,31 @@ const PROCESS_STEPS = [
 export function Timeline() {
   const { progressPercentage } = useTimelineProgress();
 
-  const [selectedMilestone, setSelectedMilestone] = React.useState<Milestone | null>(null);
+  // Default the spotlight to the final round (Grand Finale) so the visual
+  // points visitors at the upcoming showdown on load.
+  const [selectedMilestone, setSelectedMilestone] = React.useState<Milestone | null>(
+    INITIAL_MILESTONES[INITIAL_MILESTONES.length - 1] ?? null,
+  );
   const [activeTipIndex, setActiveTipIndex] = React.useState<number>(0);
 
-  // Remaining countdown calculation for Round 1 Evaluation
+  // Remaining countdown calculation for the Grand Finale. Derived from the
+  // last milestone's date so it stays in sync with the timeline data and
+  // updates exactly as days elapse.
+  const finaleMilestone = INITIAL_MILESTONES[INITIAL_MILESTONES.length - 1] ?? null;
   const [timeLeft, setTimeLeft] = React.useState({
-    days: 10,
-    hours: 18,
-    minutes: 32,
-    seconds: 45,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   });
 
   React.useEffect(() => {
-    const targetDate = new Date('2026-09-08T23:59:59').getTime();
+    const target = finaleMilestone ? parseMilestoneDate(finaleMilestone.date) : null;
+    if (!target) return;
 
-    const interval = setInterval(() => {
+    const targetDate = target.getTime();
+
+    const update = () => {
       const now = new Date().getTime();
       const difference = targetDate - now;
 
@@ -71,10 +82,13 @@ export function Timeline() {
 
         setTimeLeft({ days, hours, minutes, seconds });
       }
-    }, 1000);
+    };
+
+    update();
+    const interval = setInterval(update, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [finaleMilestone]);
 
   const handleNextTip = () => {
     setActiveTipIndex((prev) => (prev + 1) % MENTOR_TIPS.length);
@@ -240,11 +254,11 @@ export function Timeline() {
                 <Flame className="size-3.5 text-blue-600 dark:text-blue-400" />
                 Next Deadline
               </span>
-              <span className="text-xs text-slate-500 font-medium">Round 1 Evaluation</span>
+              <span className="text-xs text-slate-500 font-medium">Grand Finale</span>
             </div>
 
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
-              Round 1 Evaluation
+              Grand Finale
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 mb-6">
               Target Date: <span className="font-semibold text-slate-900 dark:text-white">08 September 2026</span>
@@ -280,10 +294,10 @@ export function Timeline() {
           </div>
 
           <Button
-            onClick={() => setSelectedMilestone(INITIAL_MILESTONES[1] ?? null)}
+            onClick={() => setSelectedMilestone(INITIAL_MILESTONES[INITIAL_MILESTONES.length - 1] ?? null)}
             className="w-full h-11 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2"
           >
-            <span>Prepare Deliverables</span>
+            <span>Go to Final Round</span>
             <ArrowRight className="size-4" />
           </Button>
         </motion.div>
@@ -410,11 +424,11 @@ const INITIAL_MILESTONES: Milestone[] = [
     id: 'm2',
     stageName: 'ROUND 1',
     title: 'Solution Presentation',
-    date: '17 August 2026',
+    date: '21 August 2026',
     description:
       'Present your proposed solution, architecture and implementation strategy to the internal jury.',
-    status: 'Upcoming',
-    remainingDays: 10,
+    status: 'Completed',
+    remainingDays: null,
     iconName: 'Lightbulb',
     deliverables: [
       'Architecture & System Component Diagram',
@@ -435,11 +449,11 @@ const INITIAL_MILESTONES: Milestone[] = [
     id: 'm3',
     stageName: 'ROUND 2',
     title: 'Top 7 Shortlisting',
-    date: '20 August 2026',
+    date: '31 August 2026',
     description:
       'The jury evaluates all projects and selects the seven strongest teams based on innovation, feasibility and execution.',
-    status: 'Upcoming',
-    remainingDays: 13,
+    status: 'Completed',
+    remainingDays: null,
     iconName: 'Trophy',
     deliverables: [
       'Working MVP / Interactive Web Prototype',
