@@ -1,0 +1,46 @@
+.falling-text-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 2em;
+}
+
+.falling-text-target {
+  display: inline-block;
+}
+
+.word {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(10, 10, 12, 0.78);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+  color: rgb(226, 232, 240);
+  font-weight: 600;
+  user-select: none;
+  white-space: nowrap;
+  backdrop-filter: blur(2px);
+}
+
+/* Every team gets the same, uniform highlight — no team stands apart and no
+   rank or ordering is implied. Kept deliberately consistent across all ten. */
+.highlighted {
+  border-color: rgba(103, 232, 249, 0.85);
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.24), rgba(14, 165, 233, 0.06));
+  color: rgb(236, 253, 245);
+  font-weight: 600;
+}
+
+.falling-text-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}

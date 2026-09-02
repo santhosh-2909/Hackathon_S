@@ -12,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Top10Hero } from '@/features/top10/Top10Hero';
+import { FalloutTeams } from '@/features/top10/FalloutTeams';
 
 export const metadata: Metadata = {
   title: 'Top 10 Finalists',
@@ -26,10 +26,6 @@ interface FinalistTeam {
   name: string;
   topic: string;
   monogram: string;
-  /** Solid brand accent used for the monogram and ring. */
-  accent: string;
-  /** Deep shade that anchors the badge — keeps the mark restrained and professional. */
-  base: string;
 }
 
 const FINALIST_TEAMS: FinalistTeam[] = [
@@ -38,80 +34,60 @@ const FINALIST_TEAMS: FinalistTeam[] = [
     name: 'A Clear',
     topic: 'An AI-Powered Smart Waste Transformation System',
     monogram: 'AC',
-    accent: 'text-indigo-300',
-    base: 'bg-indigo-950',
   },
   {
     rank: 2,
     name: 'Rescue Bite',
     topic: 'AI-driven real time food rescue network',
     monogram: 'RB',
-    accent: 'text-teal-300',
-    base: 'bg-teal-950',
   },
   {
     rank: 3,
     name: 'Byte Me',
     topic: 'An AI Powered Public Project Intelligence',
     monogram: 'BM',
-    accent: 'text-violet-300',
-    base: 'bg-violet-950',
   },
   {
     rank: 4,
     name: 'Crisis CRUSHERS',
     topic: 'App-based crop and plant disease identification',
     monogram: 'CC',
-    accent: 'text-rose-300',
-    base: 'bg-rose-950',
   },
   {
     rank: 5,
     name: 'Alpha Squad',
     topic: 'Small business ops agent',
     monogram: 'AS',
-    accent: 'text-fuchsia-300',
-    base: 'bg-fuchsia-950',
   },
   {
     rank: 6,
     name: 'Jarvis Unit',
     topic: 'LifeFlow Finder',
     monogram: 'JU',
-    accent: 'text-cyan-300',
-    base: 'bg-cyan-950',
   },
   {
     rank: 7,
     name: 'Quadrix',
     topic: 'AI-Powered Unified Citizen Service & Opportunity Platform',
     monogram: 'QX',
-    accent: 'text-purple-300',
-    base: 'bg-purple-950',
   },
   {
     rank: 8,
     name: 'Squad Crew',
     topic: 'Topic to be confirmed',
     monogram: 'SC',
-    accent: 'text-lime-300',
-    base: 'bg-lime-950',
   },
   {
     rank: 9,
     name: 'Tech Orbit',
     topic: 'AI urban flood prediction and evacuation system',
     monogram: 'TO',
-    accent: 'text-amber-300',
-    base: 'bg-amber-950',
   },
   {
     rank: 10,
     name: 'StarkX',
     topic: 'PrepFresherAI — AI-powered career & Interview coach',
     monogram: 'SX',
-    accent: 'text-slate-200',
-    base: 'bg-slate-900',
   },
 ];
 
@@ -119,19 +95,13 @@ const leftColumn = FINALIST_TEAMS.slice(0, 5);
 const rightColumn = FINALIST_TEAMS.slice(5);
 
 function TeamLogo({ team }: { team: FinalistTeam }) {
+  const { monogram } = team;
   return (
-    <div
-      className={`relative flex size-16 shrink-0 items-center justify-center rounded-2xl ${team.base} shadow-lg ring-1 ring-white/15 transition-transform duration-300 group-hover:scale-[1.03]`}
-    >
-      <span
-        className={`font-display text-xl font-bold tracking-wide drop-shadow-sm ${team.accent}`}
-      >
-        {team.monogram}
+    <div className="relative flex size-16 shrink-0 items-center justify-center rounded-2xl bg-slate-900 shadow-lg ring-1 ring-cyan-400/30 transition-transform duration-300 group-hover:scale-[1.03]">
+      <span className="font-display text-xl font-bold tracking-wide text-cyan-300 drop-shadow-sm">
+        {monogram}
       </span>
-      <span
-        className={`pointer-events-none absolute inset-x-4 bottom-1.5 h-px opacity-60 ${team.accent}`}
-        aria-hidden
-      />
+      <span className="pointer-events-none absolute inset-x-4 bottom-1.5 h-px bg-cyan-400/40" aria-hidden />
     </div>
   );
 }
@@ -154,7 +124,7 @@ function TeamCard({ team }: { team: FinalistTeam }) {
 export default function Top10Page() {
   return (
     <div className="container-page flex flex-col gap-12 py-12 md:py-16">
-      <Top10Hero />
+      <FalloutTeams teams={FINALIST_TEAMS} />
 
       <section className="mx-auto w-full max-w-5xl">
         <Card className="relative overflow-hidden border-primary/20 bg-gradient-to-b from-surface to-primary/5">
