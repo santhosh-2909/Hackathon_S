@@ -12,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { FalloutTeams } from '@/features/top10/FalloutTeams';
+import { FinalistsLineup } from '@/features/top10/FinalistsLineup';
 
 export const metadata: Metadata = {
   title: 'Top 10 Finalists',
@@ -21,111 +21,9 @@ export const metadata: Metadata = {
   alternates: { canonical: '/top-10' },
 };
 
-interface FinalistTeam {
-  rank: number;
-  name: string;
-  topic: string;
-  monogram: string;
-}
-
-const FINALIST_TEAMS: FinalistTeam[] = [
-  {
-    rank: 1,
-    name: 'A Clear',
-    topic: 'An AI-Powered Smart Waste Transformation System',
-    monogram: 'AC',
-  },
-  {
-    rank: 2,
-    name: 'Rescue Bite',
-    topic: 'AI-driven real time food rescue network',
-    monogram: 'RB',
-  },
-  {
-    rank: 3,
-    name: 'Byte Me',
-    topic: 'An AI Powered Public Project Intelligence',
-    monogram: 'BM',
-  },
-  {
-    rank: 4,
-    name: 'Crisis CRUSHERS',
-    topic: 'App-based crop and plant disease identification',
-    monogram: 'CC',
-  },
-  {
-    rank: 5,
-    name: 'Alpha Squad',
-    topic: 'Small business ops agent',
-    monogram: 'AS',
-  },
-  {
-    rank: 6,
-    name: 'Jarvis Unit',
-    topic: 'LifeFlow Finder',
-    monogram: 'JU',
-  },
-  {
-    rank: 7,
-    name: 'Quadrix',
-    topic: 'AI-Powered Unified Citizen Service & Opportunity Platform',
-    monogram: 'QX',
-  },
-  {
-    rank: 8,
-    name: 'Squad Crew',
-    topic: 'Topic to be confirmed',
-    monogram: 'SC',
-  },
-  {
-    rank: 9,
-    name: 'Tech Orbit',
-    topic: 'AI urban flood prediction and evacuation system',
-    monogram: 'TO',
-  },
-  {
-    rank: 10,
-    name: 'StarkX',
-    topic: 'PrepFresherAI — AI-powered career & Interview coach',
-    monogram: 'SX',
-  },
-];
-
-const leftColumn = FINALIST_TEAMS.slice(0, 5);
-const rightColumn = FINALIST_TEAMS.slice(5);
-
-function TeamLogo({ team }: { team: FinalistTeam }) {
-  const { monogram } = team;
-  return (
-    <div className="relative flex size-16 shrink-0 items-center justify-center rounded-2xl bg-slate-900 shadow-lg ring-1 ring-cyan-400/30 transition-transform duration-300 group-hover:scale-[1.03]">
-      <span className="font-display text-xl font-bold tracking-wide text-cyan-300 drop-shadow-sm">
-        {monogram}
-      </span>
-      <span className="pointer-events-none absolute inset-x-4 bottom-1.5 h-px bg-cyan-400/40" aria-hidden />
-    </div>
-  );
-}
-
-function TeamCard({ team }: { team: FinalistTeam }) {
-  return (
-    <li className="group flex flex-col items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-6 text-center shadow-2xs transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg">
-      <TeamLogo team={team} />
-
-      <div className="flex min-w-0 flex-col items-center gap-1">
-        <span className="text-body-lg font-semibold text-foreground">{team.name}</span>
-        <span className="line-clamp-2 max-w-[16rem] text-center text-xs leading-snug text-muted-foreground">
-          {team.topic}
-        </span>
-      </div>
-    </li>
-  );
-}
-
 export default function Top10Page() {
   return (
     <div className="container-page flex flex-col gap-12 py-12 md:py-16">
-      <FalloutTeams teams={FINALIST_TEAMS} />
-
       <section className="mx-auto w-full max-w-5xl">
         <Card className="relative overflow-hidden border-primary/20 bg-gradient-to-b from-surface to-primary/5">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
@@ -140,18 +38,7 @@ export default function Top10Page() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 lg:gap-8">
-              <ol className="flex flex-col gap-3.5">
-                {leftColumn.map((team) => (
-                  <TeamCard key={team.rank} team={team} />
-                ))}
-              </ol>
-              <ol className="flex flex-col gap-3.5">
-                {rightColumn.map((team) => (
-                  <TeamCard key={team.rank} team={team} />
-                ))}
-              </ol>
-            </div>
+            <FinalistsLineup showPit columns={2} />
           </CardContent>
         </Card>
       </section>
