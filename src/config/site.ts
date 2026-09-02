@@ -31,7 +31,7 @@ export const siteConfig = {
   description:
     'A working method for choosing hackathon problem statements: the pain-not-solution template, five pre-build checks, a weekend delivery plan, and a researched directory of ten real SIH problem statements.',
   url: resolveSiteUrl(),
-  ogImage: '/imagery/cover-0.png',
+  ogImage: '/imagery/og-cover.png',
   locale: 'en_IN',
   keywords: [
     'hackathon',
