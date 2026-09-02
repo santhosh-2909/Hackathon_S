@@ -35,6 +35,7 @@ export const metadata: Metadata = {
 interface FinalistTeam {
   rank: number;
   name: string;
+  topic: string;
   glyph: LucideIcon;
   monogram: string;
   gradient: string;
@@ -45,6 +46,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 1,
     name: 'A Clear',
+    topic: 'An AI-Powered Smart Waste Transformation System',
     glyph: Shield,
     monogram: 'AC',
     gradient: 'from-sky-500 via-blue-500 to-indigo-600',
@@ -53,6 +55,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 2,
     name: 'Rescue Bite',
+    topic: 'AI-driven real time food rescue network',
     glyph: Stethoscope,
     monogram: 'RB',
     gradient: 'from-emerald-500 via-teal-500 to-cyan-600',
@@ -61,6 +64,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 3,
     name: 'Byte Me',
+    topic: 'An AI Powered Public Project Intelligence',
     glyph: Cpu,
     monogram: 'BM',
     gradient: 'from-fuchsia-500 via-purple-500 to-violet-600',
@@ -69,6 +73,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 4,
     name: 'Crisis CRUSHERS',
+    topic: 'App-based crop and plant disease identification',
     glyph: Siren,
     monogram: 'CC',
     gradient: 'from-amber-500 via-orange-500 to-red-500',
@@ -77,6 +82,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 5,
     name: 'Alpha Squad',
+    topic: 'Small business ops agent',
     glyph: Users,
     monogram: 'AS',
     gradient: 'from-rose-500 via-pink-500 to-fuchsia-600',
@@ -85,6 +91,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 6,
     name: 'Jarvis Unit',
+    topic: 'LifeFlow Finder',
     glyph: Bot,
     monogram: 'JU',
     gradient: 'from-cyan-400 via-sky-500 to-blue-600',
@@ -93,6 +100,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 7,
     name: 'Quadrix',
+    topic: 'AI-Powered Unified Citizen Service & Opportunity Platform',
     glyph: Layers,
     monogram: 'QX',
     gradient: 'from-violet-500 via-purple-500 to-indigo-600',
@@ -101,6 +109,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 8,
     name: 'Squad Crew',
+    topic: 'Topic to be confirmed',
     glyph: Rocket,
     monogram: 'SC',
     gradient: 'from-lime-500 via-green-500 to-emerald-600',
@@ -109,6 +118,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 9,
     name: 'Tech Orbit',
+    topic: 'AI urban flood prediction and evacuation system',
     glyph: Orbit,
     monogram: 'TO',
     gradient: 'from-red-500 via-orange-500 to-amber-600',
@@ -117,6 +127,7 @@ const FINALIST_TEAMS: FinalistTeam[] = [
   {
     rank: 10,
     name: 'StarkX',
+    topic: 'PrepFresherAI — AI-powered career & Interview coach',
     glyph: Zap,
     monogram: 'SX',
     gradient: 'from-slate-600 via-slate-700 to-gray-800',
@@ -150,7 +161,9 @@ function TeamCard({ team }: { team: FinalistTeam }) {
 
       <div className="flex min-w-0 flex-col items-center gap-0.5">
         <span className="truncate text-body-lg font-semibold text-foreground">{team.name}</span>
-        <span className="text-xs font-medium text-muted-foreground">Finalist Team</span>
+        <span className="line-clamp-2 text-center text-xs leading-snug text-muted-foreground">
+          {team.topic}
+        </span>
       </div>
     </li>
   );

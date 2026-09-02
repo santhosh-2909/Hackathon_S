@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 
 import { siteConfig } from '@/config/site';
 import { Hero } from '@/features/marketing/hero';
+import { HyperspeedBackground } from '@/features/hyperspeed/HyperspeedBackground';
 import { ProjectJourney } from '@/features/marketing/project-journey';
 import { DomainMarquee } from '@/features/marketing/domain-marquee';
 import { ProblemFramework } from '@/features/marketing/problem-framework';
@@ -32,7 +33,10 @@ export default function HomePage() {
         // Serialised from a literal we control — no user input reaches this string.
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Hero />
+      <section className="relative isolate overflow-hidden">
+        <HyperspeedBackground />
+        <Hero />
+      </section>
       <ProjectJourney />
       <DomainMarquee />
       <ProblemFramework />
