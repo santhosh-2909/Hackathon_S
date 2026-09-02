@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, Compass } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -41,41 +40,23 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(79,70,229,0.12),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(251,146,60,0.14),_transparent_30%)]" />
-        <div className="absolute inset-0 flex items-center justify-center opacity-10">
-          <Image
-            src="/imagery/kira-logo-wide.png"
-            alt=""
-            aria-hidden
-            width={1024}
-            height={600}
-            className="h-auto w-[min(34rem,72vw)] object-contain"
-          />
-        </div>
-      </div>
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] blueprint-grid mask-fade-b opacity-[0.55]"
-      />
-
       <div className="relative container-page grid gap-14 py-20 md:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-center lg:gap-16 xl:py-28">
         <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
           <Reveal>
-            <p className="overline text-accent-text">The problem-statement workshop</p>
+            <p className="overline text-indigo-200">The problem-statement workshop</p>
           </Reveal>
 
           <Reveal delayStep={1}>
             {/* Two-tone: the muted half is the instruction people skip, the ink
                 half is the one that decides the project. */}
             <h1 className="max-w-[14ch] font-display text-hero">
-              <span className="text-muted-foreground">Don&rsquo;t guess,</span>{' '}
-              <span className="text-foreground">just ask</span>
+              <span className="text-slate-200">Don&rsquo;t guess,</span>{' '}
+              <span className="text-white">just ask</span>
             </h1>
           </Reveal>
 
           <Reveal delayStep={2}>
-            <p className="max-w-xl text-body-lg text-balance text-muted-foreground">
+            <p className="max-w-xl text-body-lg text-balance text-slate-200">
               Most losing projects fail before any code is written. This turns a vague idea into a
               problem statement a judge can verify — in about thirty minutes.
             </p>
@@ -89,28 +70,28 @@ function Hero() {
                   Browse the statements
                 </Link>
               </Button>
-              <Button asChild variant="ghost" size="lg" className="h-12 px-5 text-body">
+              <Button asChild variant="ghost" size="lg" className="h-12 px-5 text-body text-white hover:bg-white/10">
                 <Link href="#the-problem">
                   Read the method
                   <ArrowRight aria-hidden />
                 </Link>
               </Button>
             </div>
-            <p className="text-caption text-muted-foreground">
+            <p className="text-caption text-slate-300">
               Ten researched SIH statements, plus guided problem discovery
             </p>
           </Reveal>
 
           <Reveal delayStep={4} className="w-full">
-            <dl className="mt-8 grid w-full max-w-xl grid-cols-2 gap-x-8 gap-y-8 border-t border-border pt-8 sm:grid-cols-4">
+            <dl className="mt-8 grid w-full max-w-xl grid-cols-2 gap-x-8 gap-y-8 border-t border-white/20 pt-8 sm:grid-cols-4">
               {SIGNALS.map((signal) => (
                 <div
                   key={signal.label}
                   className="flex flex-col items-center gap-1.5 lg:items-start"
                 >
                   <dt className="sr-only">{signal.label}</dt>
-                  <dd className="font-display text-display-lg leading-none">{signal.value}</dd>
-                  <p aria-hidden className="text-caption text-muted-foreground">
+                  <dd className="font-display text-display-lg leading-none text-white">{signal.value}</dd>
+                  <p aria-hidden className="text-caption text-slate-300">
                     {signal.label}
                   </p>
                 </div>

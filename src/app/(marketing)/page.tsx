@@ -33,7 +33,7 @@ export default function HomePage() {
         // Serialised from a literal we control — no user input reaches this string.
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="relative isolate overflow-hidden">
+      <section className="relative isolate overflow-hidden rounded-[28px] border border-border shadow-lg">
         <HyperspeedBackground />
         <Hero />
       </section>

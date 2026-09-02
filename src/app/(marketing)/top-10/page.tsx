@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import type { LucideIcon } from 'lucide-react';
 import {
   ArrowRight,
   Calendar,
@@ -8,16 +7,6 @@ import {
   Crown,
   HeartHandshake,
   Award,
-  Shield,
-  Stethoscope,
-  Cpu,
-  Siren,
-  Rocket,
-  Bot,
-  Layers,
-  Users,
-  Orbit,
-  Zap,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -36,10 +25,11 @@ interface FinalistTeam {
   rank: number;
   name: string;
   topic: string;
-  glyph: LucideIcon;
   monogram: string;
-  gradient: string;
+  /** Solid brand accent used for the monogram and ring. */
   accent: string;
+  /** Deep shade that anchors the badge — keeps the mark restrained and professional. */
+  base: string;
 }
 
 const FINALIST_TEAMS: FinalistTeam[] = [
@@ -47,91 +37,81 @@ const FINALIST_TEAMS: FinalistTeam[] = [
     rank: 1,
     name: 'A Clear',
     topic: 'An AI-Powered Smart Waste Transformation System',
-    glyph: Shield,
     monogram: 'AC',
-    gradient: 'from-sky-500 via-blue-500 to-indigo-600',
-    accent: 'group-hover:from-sky-400 group-hover:to-indigo-500',
+    accent: 'text-indigo-300',
+    base: 'bg-indigo-950',
   },
   {
     rank: 2,
     name: 'Rescue Bite',
     topic: 'AI-driven real time food rescue network',
-    glyph: Stethoscope,
     monogram: 'RB',
-    gradient: 'from-emerald-500 via-teal-500 to-cyan-600',
-    accent: 'group-hover:from-emerald-400 group-hover:to-cyan-500',
+    accent: 'text-teal-300',
+    base: 'bg-teal-950',
   },
   {
     rank: 3,
     name: 'Byte Me',
     topic: 'An AI Powered Public Project Intelligence',
-    glyph: Cpu,
     monogram: 'BM',
-    gradient: 'from-fuchsia-500 via-purple-500 to-violet-600',
-    accent: 'group-hover:from-fuchsia-400 group-hover:to-violet-500',
+    accent: 'text-violet-300',
+    base: 'bg-violet-950',
   },
   {
     rank: 4,
     name: 'Crisis CRUSHERS',
     topic: 'App-based crop and plant disease identification',
-    glyph: Siren,
     monogram: 'CC',
-    gradient: 'from-amber-500 via-orange-500 to-red-500',
-    accent: 'group-hover:from-amber-400 group-hover:to-red-500',
+    accent: 'text-rose-300',
+    base: 'bg-rose-950',
   },
   {
     rank: 5,
     name: 'Alpha Squad',
     topic: 'Small business ops agent',
-    glyph: Users,
     monogram: 'AS',
-    gradient: 'from-rose-500 via-pink-500 to-fuchsia-600',
-    accent: 'group-hover:from-rose-400 group-hover:to-fuchsia-500',
+    accent: 'text-fuchsia-300',
+    base: 'bg-fuchsia-950',
   },
   {
     rank: 6,
     name: 'Jarvis Unit',
     topic: 'LifeFlow Finder',
-    glyph: Bot,
     monogram: 'JU',
-    gradient: 'from-cyan-400 via-sky-500 to-blue-600',
-    accent: 'group-hover:from-cyan-300 group-hover:to-blue-500',
+    accent: 'text-cyan-300',
+    base: 'bg-cyan-950',
   },
   {
     rank: 7,
     name: 'Quadrix',
     topic: 'AI-Powered Unified Citizen Service & Opportunity Platform',
-    glyph: Layers,
     monogram: 'QX',
-    gradient: 'from-violet-500 via-purple-500 to-indigo-600',
-    accent: 'group-hover:from-violet-400 group-hover:to-indigo-500',
+    accent: 'text-purple-300',
+    base: 'bg-purple-950',
   },
   {
     rank: 8,
     name: 'Squad Crew',
     topic: 'Topic to be confirmed',
-    glyph: Rocket,
     monogram: 'SC',
-    gradient: 'from-lime-500 via-green-500 to-emerald-600',
-    accent: 'group-hover:from-lime-400 group-hover:to-emerald-500',
+    accent: 'text-lime-300',
+    base: 'bg-lime-950',
   },
   {
     rank: 9,
     name: 'Tech Orbit',
     topic: 'AI urban flood prediction and evacuation system',
-    glyph: Orbit,
     monogram: 'TO',
-    gradient: 'from-red-500 via-orange-500 to-amber-600',
-    accent: 'group-hover:from-red-400 group-hover:to-amber-500',
+    accent: 'text-amber-300',
+    base: 'bg-amber-950',
   },
   {
     rank: 10,
     name: 'StarkX',
     topic: 'PrepFresherAI — AI-powered career & Interview coach',
-    glyph: Zap,
     monogram: 'SX',
-    gradient: 'from-slate-600 via-slate-700 to-gray-800',
-    accent: 'group-hover:from-slate-500 group-hover:to-gray-700',
+    accent: 'text-slate-200',
+    base: 'bg-slate-900',
   },
 ];
 
@@ -139,29 +119,31 @@ const leftColumn = FINALIST_TEAMS.slice(0, 5);
 const rightColumn = FINALIST_TEAMS.slice(5);
 
 function TeamLogo({ team }: { team: FinalistTeam }) {
-  const Glyph = team.glyph;
   return (
     <div
-      className={`flex size-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${team.gradient} ${team.accent} shadow-lg transition-transform duration-300`}
+      className={`relative flex size-16 shrink-0 items-center justify-center rounded-2xl ${team.base} shadow-lg ring-1 ring-white/15 transition-transform duration-300 group-hover:scale-[1.03]`}
     >
-      <div className="flex flex-col items-center justify-center leading-none">
-        <Glyph className="size-4 text-white/90" strokeWidth={2.2} />
-        <span className="mt-0.5 text-[10px] font-extrabold tracking-wide text-white">
-          {team.monogram}
-        </span>
-      </div>
+      <span
+        className={`font-display text-xl font-bold tracking-wide drop-shadow-sm ${team.accent}`}
+      >
+        {team.monogram}
+      </span>
+      <span
+        className={`pointer-events-none absolute inset-x-4 bottom-1.5 h-px opacity-60 ${team.accent}`}
+        aria-hidden
+      />
     </div>
   );
 }
 
 function TeamCard({ team }: { team: FinalistTeam }) {
   return (
-    <li className="group flex items-center gap-4 rounded-2xl border border-border bg-surface px-4 py-4 shadow-2xs transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg">
+    <li className="group flex flex-col items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-6 text-center shadow-2xs transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg">
       <TeamLogo team={team} />
 
-      <div className="flex min-w-0 flex-col items-center gap-0.5">
-        <span className="truncate text-body-lg font-semibold text-foreground">{team.name}</span>
-        <span className="line-clamp-2 text-center text-xs leading-snug text-muted-foreground">
+      <div className="flex min-w-0 flex-col items-center gap-1">
+        <span className="text-body-lg font-semibold text-foreground">{team.name}</span>
+        <span className="line-clamp-2 max-w-[16rem] text-center text-xs leading-snug text-muted-foreground">
           {team.topic}
         </span>
       </div>
