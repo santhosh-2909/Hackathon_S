@@ -57,7 +57,7 @@ export function Timeline() {
   });
 
   React.useEffect(() => {
-    const targetDate = new Date('2026-08-17T23:59:59').getTime();
+    const targetDate = new Date('2026-09-08T23:59:59').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -215,9 +215,9 @@ export function Timeline() {
               Teams to Final
             </p>
             <div className="flex items-baseline gap-2 mt-0.5">
-              <span className="text-2xl font-extrabold text-slate-900 dark:text-white">Top 7</span>
+              <span className="text-2xl font-extrabold text-slate-900 dark:text-white">Top 10</span>
               <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-                Shortlisted
+                Finalists
               </span>
             </div>
           </div>
@@ -247,7 +247,7 @@ export function Timeline() {
               Round 1 Evaluation
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 mb-6">
-              Target Date: <span className="font-semibold text-slate-900 dark:text-white">17 August 2026</span>
+              Target Date: <span className="font-semibold text-slate-900 dark:text-white">08 September 2026</span>
             </p>
 
             {/* Countdown Cards */}
@@ -460,7 +460,7 @@ const INITIAL_MILESTONES: Milestone[] = [
     id: 'm4',
     stageName: 'GRAND FINALE',
     title: 'Final Presentation',
-    date: '24 August 2026',
+    date: '08 September 2026',
     description:
       'Pitch your complete working prototype before external jury members and compete for the championship.',
     status: 'Locked',

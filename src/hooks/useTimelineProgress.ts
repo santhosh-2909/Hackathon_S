@@ -83,7 +83,7 @@ export const INITIAL_MILESTONES: Milestone[] = [
     id: 'm4',
     stageName: 'GRAND FINALE',
     title: 'Final Presentation',
-    date: '24 August 2026',
+    date: '08 September 2026',
     description:
       'Pitch your complete working prototype before external jury members and compete for the championship.',
     status: 'Locked',
