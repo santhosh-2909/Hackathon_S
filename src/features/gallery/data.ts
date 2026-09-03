@@ -28,7 +28,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 01 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-01.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1lDmy706YWmbFblQPpSjgM-64V1coGUPq',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1lDmy706YWmbFblQPpSjgM-64V1coGUPq&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1lDmy706YWmbFblQPpSjgM-64V1coGUPq',
   },
   {
@@ -36,7 +36,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 02 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-02.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1KWr3KZlqRriiBL-UjjStYoKHYwFTou-r',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1KWr3KZlqRriiBL-UjjStYoKHYwFTou-r&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1KWr3KZlqRriiBL-UjjStYoKHYwFTou-r',
   },
   {
@@ -44,7 +44,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 03 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-03.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=131tY31z6Gccov9nuuSi5m0JoQP0DTbyC',
+    imageUrl: 'https://drive.google.com/thumbnail?id=131tY31z6Gccov9nuuSi5m0JoQP0DTbyC&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=131tY31z6Gccov9nuuSi5m0JoQP0DTbyC',
   },
   {
@@ -52,7 +52,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 04 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-04.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1Jd6WJbAMogO6olv8OxyeQQ14AbN5pjWs',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1Jd6WJbAMogO6olv8OxyeQQ14AbN5pjWs&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1Jd6WJbAMogO6olv8OxyeQQ14AbN5pjWs',
   },
   {
@@ -60,7 +60,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 05 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-05.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1LTNREyAXlnWOrwCO-I_5mUeuE6MYHUmi',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1LTNREyAXlnWOrwCO-I_5mUeuE6MYHUmi&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1LTNREyAXlnWOrwCO-I_5mUeuE6MYHUmi',
   },
   {
@@ -68,7 +68,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 06 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-06.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1OIlWNZ6RfGZL4CB-BFd_RIUBdmtbv3Dt',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1OIlWNZ6RfGZL4CB-BFd_RIUBdmtbv3Dt&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1OIlWNZ6RfGZL4CB-BFd_RIUBdmtbv3Dt',
   },
   {
@@ -76,7 +76,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 07 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-07.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=139tRAzz4Upx69ark0Asl2AZycA3lxwBy',
+    imageUrl: 'https://drive.google.com/thumbnail?id=139tRAzz4Upx69ark0Asl2AZycA3lxwBy&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=139tRAzz4Upx69ark0Asl2AZycA3lxwBy',
   },
   {
@@ -84,7 +84,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 08 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-08.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1Oeo-aODijImcyJtxi6YgRpR1m-nkz_oI',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1Oeo-aODijImcyJtxi6YgRpR1m-nkz_oI&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1Oeo-aODijImcyJtxi6YgRpR1m-nkz_oI',
   },
   {
@@ -92,7 +92,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 09 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-09.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1fYC2Ci78a9rA1tHfa463zLexYy37Pgpl',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1fYC2Ci78a9rA1tHfa463zLexYy37Pgpl&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1fYC2Ci78a9rA1tHfa463zLexYy37Pgpl',
   },
   {
@@ -100,7 +100,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 10 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-10.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1-Z1ffV5zrsRABfHhjyfAHmgDbQ6IOU85',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1-Z1ffV5zrsRABfHhjyfAHmgDbQ6IOU85&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1-Z1ffV5zrsRABfHhjyfAHmgDbQ6IOU85',
   },
   {
@@ -108,7 +108,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 11 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-11.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1qKZ4aWlucmXTU93AxVxpZPEjSkFZKFoc',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1qKZ4aWlucmXTU93AxVxpZPEjSkFZKFoc&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1qKZ4aWlucmXTU93AxVxpZPEjSkFZKFoc',
   },
   {
@@ -116,7 +116,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 12 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-12.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=10MIp5eCLwauidQep8QeOQsXND7LQvk_H',
+    imageUrl: 'https://drive.google.com/thumbnail?id=10MIp5eCLwauidQep8QeOQsXND7LQvk_H&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=10MIp5eCLwauidQep8QeOQsXND7LQvk_H',
   },
   {
@@ -124,7 +124,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 13 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-13.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1FUuAHsxsFnLtjaccajlmLSlKy2c2skeq',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1FUuAHsxsFnLtjaccajlmLSlKy2c2skeq&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1FUuAHsxsFnLtjaccajlmLSlKy2c2skeq',
   },
   {
@@ -132,7 +132,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 14 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-14.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1RRMJj-Ews7qqZAjUWV7A7g1Hw7uMlNgv',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1RRMJj-Ews7qqZAjUWV7A7g1Hw7uMlNgv&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1RRMJj-Ews7qqZAjUWV7A7g1Hw7uMlNgv',
   },
   {
@@ -140,7 +140,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 15 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-15.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1pSqK440RnY7raF8mSEYB6OdwoApFiTru',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1pSqK440RnY7raF8mSEYB6OdwoApFiTru&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1pSqK440RnY7raF8mSEYB6OdwoApFiTru',
   },
   {
@@ -148,7 +148,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 16 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-16.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=11_0_TzM8HcMV4AmySmj04BuroC-dhPP4',
+    imageUrl: 'https://drive.google.com/thumbnail?id=11_0_TzM8HcMV4AmySmj04BuroC-dhPP4&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=11_0_TzM8HcMV4AmySmj04BuroC-dhPP4',
   },
   {
@@ -156,7 +156,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 17 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-17.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=14SE9e8y5i_NsL8u9jcpEv6fdI9Jq3Vdn',
+    imageUrl: 'https://drive.google.com/thumbnail?id=14SE9e8y5i_NsL8u9jcpEv6fdI9Jq3Vdn&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=14SE9e8y5i_NsL8u9jcpEv6fdI9Jq3Vdn',
   },
   {
@@ -164,7 +164,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 18 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-18.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1b2Fjpb7mTswbl1VRHQYQPDgf9aJ0Zol4',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1b2Fjpb7mTswbl1VRHQYQPDgf9aJ0Zol4&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1b2Fjpb7mTswbl1VRHQYQPDgf9aJ0Zol4',
   },
   {
@@ -172,7 +172,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 19 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-19.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1Yphrsr2AcOHz1KxeohePMGKh8cF8wWZm',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1Yphrsr2AcOHz1KxeohePMGKh8cF8wWZm&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1Yphrsr2AcOHz1KxeohePMGKh8cF8wWZm',
   },
   {
@@ -180,7 +180,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 20 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-20.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1f8eCm68jle115g2ROF-H_Cs0s5qvFcvC',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1f8eCm68jle115g2ROF-H_Cs0s5qvFcvC&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1f8eCm68jle115g2ROF-H_Cs0s5qvFcvC',
   },
   {
@@ -188,7 +188,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 21 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-21.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1VwjZrPeD1zLl2n02aCyTVy5glfFuAErS',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1VwjZrPeD1zLl2n02aCyTVy5glfFuAErS&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1VwjZrPeD1zLl2n02aCyTVy5glfFuAErS',
   },
   {
@@ -196,7 +196,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 22 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-22.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1EXj8RepzSzbUL9_PrX-ZThNY7j_XIbMd',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1EXj8RepzSzbUL9_PrX-ZThNY7j_XIbMd&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1EXj8RepzSzbUL9_PrX-ZThNY7j_XIbMd',
   },
   {
@@ -204,7 +204,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 23 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-23.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1WfhpuAyCWI7vHbqNPCCEcDHVhx0pm_sJ',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1WfhpuAyCWI7vHbqNPCCEcDHVhx0pm_sJ&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1WfhpuAyCWI7vHbqNPCCEcDHVhx0pm_sJ',
   },
   {
@@ -212,7 +212,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 24 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-24.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1ku8iT_KBIz2IbmLA2IW7oOxV_ya8aLxQ',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1ku8iT_KBIz2IbmLA2IW7oOxV_ya8aLxQ&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1ku8iT_KBIz2IbmLA2IW7oOxV_ya8aLxQ',
   },
   {
@@ -220,7 +220,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 25 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-25.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1GZFwnbZlWhA7QkNd554BZ22kQ0wQAkEn',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1GZFwnbZlWhA7QkNd554BZ22kQ0wQAkEn&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1GZFwnbZlWhA7QkNd554BZ22kQ0wQAkEn',
   },
   {
@@ -228,7 +228,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 26 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-26.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1OwpZxHluTJ8xMI3KO4OQ07xQTwT3o6W7',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1OwpZxHluTJ8xMI3KO4OQ07xQTwT3o6W7&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1OwpZxHluTJ8xMI3KO4OQ07xQTwT3o6W7',
   },
   {
@@ -236,7 +236,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 27 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-27.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1rn3geZqv8YRhjFPFSRgUSmQ2smUhu8Wg',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1rn3geZqv8YRhjFPFSRgUSmQ2smUhu8Wg&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1rn3geZqv8YRhjFPFSRgUSmQ2smUhu8Wg',
   },
   {
@@ -244,7 +244,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 28 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-28.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1v5ePfTEeZ_HmlMrd50XRRVBCty-nLtV7',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1v5ePfTEeZ_HmlMrd50XRRVBCty-nLtV7&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1v5ePfTEeZ_HmlMrd50XRRVBCty-nLtV7',
   },
   {
@@ -252,7 +252,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 29 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-29.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1Q-X5hmowFWwbUNVBd2vmW3cYcA_za53D',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1Q-X5hmowFWwbUNVBd2vmW3cYcA_za53D&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1Q-X5hmowFWwbUNVBd2vmW3cYcA_za53D',
   },
   {
@@ -260,7 +260,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 30 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-30.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1NPyFhDOxXSevNz3r7jhn4-K7l1wM2p8x',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1NPyFhDOxXSevNz3r7jhn4-K7l1wM2p8x&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1NPyFhDOxXSevNz3r7jhn4-K7l1wM2p8x',
   },
   {
@@ -268,7 +268,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 31 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-31.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1wBmnJKtOlfmolAirdYkmRJu2K-WS0Zpn',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1wBmnJKtOlfmolAirdYkmRJu2K-WS0Zpn&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1wBmnJKtOlfmolAirdYkmRJu2K-WS0Zpn',
   },
   {
@@ -276,7 +276,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 32 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-32.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1rB9SiaSQ8SGWNX5p0y4MYcxYHsSbcLpO',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1rB9SiaSQ8SGWNX5p0y4MYcxYHsSbcLpO&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1rB9SiaSQ8SGWNX5p0y4MYcxYHsSbcLpO',
   },
   {
@@ -284,7 +284,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 33 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-33.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=16BHEKO7seitRpn8DNo3WeDhH7uLaE8cA',
+    imageUrl: 'https://drive.google.com/thumbnail?id=16BHEKO7seitRpn8DNo3WeDhH7uLaE8cA&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=16BHEKO7seitRpn8DNo3WeDhH7uLaE8cA',
   },
   {
@@ -292,7 +292,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 34 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-34.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1aROSoUkuwmsQcCdhe3ODNGMH4Y41hLNL',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1aROSoUkuwmsQcCdhe3ODNGMH4Y41hLNL&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1aROSoUkuwmsQcCdhe3ODNGMH4Y41hLNL',
   },
   {
@@ -300,7 +300,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 35 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-35.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1mNybwHlVmbrfEgbJtzYvJfT1IvAxf1-8',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1mNybwHlVmbrfEgbJtzYvJfT1IvAxf1-8&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1mNybwHlVmbrfEgbJtzYvJfT1IvAxf1-8',
   },
   {
@@ -308,7 +308,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 36 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-36.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=179r-7gEBY4nCGsCfXMDETxgevF2YpoRC',
+    imageUrl: 'https://drive.google.com/thumbnail?id=179r-7gEBY4nCGsCfXMDETxgevF2YpoRC&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=179r-7gEBY4nCGsCfXMDETxgevF2YpoRC',
   },
   {
@@ -316,7 +316,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 37 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-37.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1R5k2HTEPA1s6UpykOmMqqmruMACMKOeG',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1R5k2HTEPA1s6UpykOmMqqmruMACMKOeG&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1R5k2HTEPA1s6UpykOmMqqmruMACMKOeG',
   },
   {
@@ -324,7 +324,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 38 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-38.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1sXXAVEH7Rt71OYnMTccXPh2RBF_AUV_z',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1sXXAVEH7Rt71OYnMTccXPh2RBF_AUV_z&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1sXXAVEH7Rt71OYnMTccXPh2RBF_AUV_z',
   },
   {
@@ -332,7 +332,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 39 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-39.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=175I9SxDQVpCBWLxhpB2gLbkAomY48_Ce',
+    imageUrl: 'https://drive.google.com/thumbnail?id=175I9SxDQVpCBWLxhpB2gLbkAomY48_Ce&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=175I9SxDQVpCBWLxhpB2gLbkAomY48_Ce',
   },
   {
@@ -340,7 +340,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 40 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-40.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1xvzUtj2PWcuKNL1O5aTlXrR_0SRcj-vO',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1xvzUtj2PWcuKNL1O5aTlXrR_0SRcj-vO&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1xvzUtj2PWcuKNL1O5aTlXrR_0SRcj-vO',
   },
   {
@@ -348,7 +348,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 41 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-41.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1ugHJEGGZpBl-XZcNu7VADU3eLMklOGlp',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1ugHJEGGZpBl-XZcNu7VADU3eLMklOGlp&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1ugHJEGGZpBl-XZcNu7VADU3eLMklOGlp',
   },
   {
@@ -356,7 +356,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 42 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-42.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1Tytoyq71fy9PgU-X6YAv_bbnKNa8Gb3U',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1Tytoyq71fy9PgU-X6YAv_bbnKNa8Gb3U&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1Tytoyq71fy9PgU-X6YAv_bbnKNa8Gb3U',
   },
   {
@@ -364,7 +364,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 43 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-43.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1kwun4GHKV6YVkdwaeHaJg_G64pef31DX',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1kwun4GHKV6YVkdwaeHaJg_G64pef31DX&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1kwun4GHKV6YVkdwaeHaJg_G64pef31DX',
   },
   {
@@ -372,7 +372,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 44 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-44.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1-jcHaKKR59FKQbZ0zbuUBe2-uvBYpzD9',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1-jcHaKKR59FKQbZ0zbuUBe2-uvBYpzD9&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1-jcHaKKR59FKQbZ0zbuUBe2-uvBYpzD9',
   },
   {
@@ -380,7 +380,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 45 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-45.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1i5V5riqYk1c-4c6YgSrCGC2xiPwxCx3G',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1i5V5riqYk1c-4c6YgSrCGC2xiPwxCx3G&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1i5V5riqYk1c-4c6YgSrCGC2xiPwxCx3G',
   },
   {
@@ -388,7 +388,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 46 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-46.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=18AToL0oRlu-jG_22fiJVGbgG0g5qaAMh',
+    imageUrl: 'https://drive.google.com/thumbnail?id=18AToL0oRlu-jG_22fiJVGbgG0g5qaAMh&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=18AToL0oRlu-jG_22fiJVGbgG0g5qaAMh',
   },
   {
@@ -396,7 +396,7 @@ export const GALLERY_PHOTOS: readonly GalleryPhoto[] = [
     alt: 'KIRA 2026 event photo 47 of 47',
     title: 'KIRA 2026 · Event Moments',
     fileName: 'KIRA-2026-photo-47.jpg',
-    imageUrl: 'https://drive.google.com/uc?export=view&id=1YkHaHpNvJ5DpC7DzYwluJmEEKUwF4AaO',
+    imageUrl: 'https://drive.google.com/thumbnail?id=1YkHaHpNvJ5DpC7DzYwluJmEEKUwF4AaO&sz=w1600',
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1YkHaHpNvJ5DpC7DzYwluJmEEKUwF4AaO',
   },
 ];

@@ -28,6 +28,7 @@ export const MARKETING_NAV: NavItem[] = [
   { href: '/problems', label: 'Problem statements' },
   { href: '/project-journey', label: 'Timeline' },
   { href: '/top-10', label: 'Top 10 Finalists' },
+  { href: '/gallery', label: 'Gallery' },
   { href: '/#the-stack', label: 'Stack' },
   { href: '/workshop', label: 'Workshop' },
   { href: '/playbook', label: 'Playbook' },
