@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Users, ArrowRight, HeartHandshake, Sparkles } from 'lucide-react';
+import { ArrowRight, HeartHandshake, Sparkles } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Reveal } from '@/components/common/reveal';
 import { FinalistsLineup } from '@/features/top10/FinalistsLineup';
 import { FinalRoundHero } from '@/features/top10/FinalRoundHero';
 import { StageVisual } from '@/features/top10/StageVisual';
@@ -27,25 +26,7 @@ export default function Top10Page() {
 
       {/* 2 · the 10 teams that remain */}
       <section className="container-page flex flex-col gap-8 py-2">
-        <Reveal className="mx-auto flex w-full max-w-5xl flex-col items-center gap-2 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-border bg-accent-surface px-3 py-1 text-xs font-semibold text-accent-text">
-            <Users className="size-3.5" aria-hidden />
-            10 teams remain
-          </span>
-          <h2 className="font-display text-h2 font-semibold text-foreground">
-            Congratulations, Finalists! 🎉
-          </h2>
-          <p className="max-w-xl text-body-sm text-muted-foreground">
-            You have earned your place among the best. But the winner is still unknown — only three
-            will rise on September 8.
-          </p>
-        </Reveal>
-
-        <Reveal delayStep={1} className="mx-auto w-full max-w-5xl">
-          <div className="rounded-[28px] border border-border bg-surface p-4 shadow-e4 sm:p-6">
-            <FinalistsLineup showPit columns={2} />
-          </div>
-        </Reveal>
+        <FinalistsLineup showPit columns={2} />
       </section>
 
       {/* 3 · stage with the unknown finalist */}
