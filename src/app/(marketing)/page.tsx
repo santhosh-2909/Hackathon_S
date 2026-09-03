@@ -10,6 +10,7 @@ import { ApproachTimeline } from '@/features/marketing/approach-timeline';
 import { StackGuide } from '@/features/marketing/stack-guide';
 import { DirectoryPreview } from '@/features/marketing/directory-preview';
 import { CtaBand } from '@/features/marketing/cta-band';
+import { FinalsDateHighlight } from '@/features/marketing/finals-date-highlight';
 import { DirectoryPreviewSkeleton } from '@/features/marketing/directory-preview-skeleton';
 import { FinalistsSheet } from '@/features/top10/FinalistsSheet';
 
@@ -38,6 +39,7 @@ export default function HomePage() {
         <HyperspeedBackground />
         <Hero />
       </section>
+      <FinalsDateHighlight />
       <ProjectJourney />
       <DomainMarquee />
       <ProblemFramework />

@@ -250,9 +250,9 @@ export function Timeline() {
         >
           <div>
             <div className="flex items-center justify-between mb-4">
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 flex items-center gap-1.5">
-                <Flame className="size-3.5 text-blue-600 dark:text-blue-400" />
-                Next Deadline
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 flex items-center gap-1.5">
+                <Flame className="size-3.5 text-amber-600 dark:text-amber-400" />
+                Final Round
               </span>
               <span className="text-xs text-slate-500 font-medium">Grand Finale</span>
             </div>
@@ -260,8 +260,12 @@ export function Timeline() {
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
               Grand Finale
             </h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mb-6">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
               Target Date: <span className="font-semibold text-slate-900 dark:text-white">08 September 2026</span>
+            </p>
+            <p className="mb-4 inline-flex items-center gap-1.5 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/50 px-2 py-1 text-[11px] font-semibold text-amber-700 dark:text-amber-300">
+              <Trophy className="size-3.5" aria-hidden />
+              The Top 3 winners stay hidden until Sept 8
             </p>
 
             {/* Countdown Cards */}

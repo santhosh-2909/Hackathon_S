@@ -1,86 +1,89 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import {
-  ArrowRight,
-  Calendar,
-  Sparkles,
-  Crown,
-  HeartHandshake,
-  Award,
-} from 'lucide-react';
+import { Users, ArrowRight, HeartHandshake, Sparkles } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Reveal } from '@/components/common/reveal';
 import { FinalistsLineup } from '@/features/top10/FinalistsLineup';
+import { FinalRoundHero } from '@/features/top10/FinalRoundHero';
+import { StageVisual } from '@/features/top10/StageVisual';
+import { MysteryTop3 } from '@/features/top10/MysteryTop3';
+import { WinnerPodium } from '@/features/top10/WinnerPodium';
+import { FinalRoundCountdown } from '@/features/top10/FinalRoundCountdown';
 
 export const metadata: Metadata = {
-  title: 'Top 10 Finalists',
+  title: 'Top 10 Finalists — Final Round',
   description:
-    'Meet the Top 10 finalist teams of Kira 2026 Innovation Challenge who have showcased outstanding creativity, innovation, and hard work.',
+    'The Top 10 finalist teams of Kira 2026 have earned their place. The Final Round is September 8 — only 3 will claim the podium. Winners stay hidden until the reveal.',
   alternates: { canonical: '/top-10' },
 };
 
 export default function Top10Page() {
   return (
-    <div className="container-page flex flex-col gap-12 py-12 md:py-16">
-      <section className="mx-auto w-full max-w-5xl">
-        <Card className="relative overflow-hidden border-primary/20 bg-gradient-to-b from-surface to-primary/5">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+    <div className="flex flex-col gap-12 md:gap-16">
+      {/* 1 · FINAL ROUND — the Sept 8 focal point */}
+      <FinalRoundHero />
 
-          <CardContent className="p-6 md:p-10">
-            <div className="mb-8 flex flex-col items-center gap-2 text-center">
-              <Award className="size-7 text-primary" />
-              <h2 className="font-display text-h2">Congratulations, Teams! 🎉</h2>
-              <p className="max-w-xl text-body-sm text-muted-foreground">
-                You have earned your place among the best. The journey to the finals continues —
-                here is our incredible lineup:
-              </p>
-            </div>
+      {/* 2 · the 10 teams that remain */}
+      <section className="container-page flex flex-col gap-8 py-2">
+        <Reveal className="mx-auto flex w-full max-w-5xl flex-col items-center gap-2 text-center">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-border bg-accent-surface px-3 py-1 text-xs font-semibold text-accent-text">
+            <Users className="size-3.5" aria-hidden />
+            10 teams remain
+          </span>
+          <h2 className="font-display text-h2 font-semibold text-foreground">
+            Congratulations, Finalists! 🎉
+          </h2>
+          <p className="max-w-xl text-body-sm text-muted-foreground">
+            You have earned your place among the best. But the winner is still unknown — only three
+            will rise on September 8.
+          </p>
+        </Reveal>
 
+        <Reveal delayStep={1} className="mx-auto w-full max-w-5xl">
+          <div className="rounded-[28px] border border-border bg-surface p-4 shadow-e4 sm:p-6">
             <FinalistsLineup showPit columns={2} />
-          </CardContent>
-        </Card>
+          </div>
+        </Reveal>
       </section>
 
-      <section className="mx-auto flex max-w-3xl flex-col items-center text-center gap-6">
-        <div className="flex flex-col items-center gap-2">
-          <Crown className="size-8 text-amber-500 dark:text-amber-400" />
-          <h2 className="font-display text-h3">The Ultimate Showdown Awaits</h2>
-        </div>
+      {/* 3 · stage with the unknown finalist */}
+      <StageVisual />
 
-        <Card className="w-full border-accent-border bg-accent-surface/50">
-          <CardContent className="flex flex-col items-center gap-3 p-6 text-center">
-            <Calendar className="size-8 text-accent-text" />
-            <h3 className="text-h4 font-bold text-accent-text">Finals Date: 08 September 2026</h3>
-            <p className="text-body-sm text-muted-foreground max-w-lg">
-              All finalists are requested to prepare thoroughly, refine your projects, test every
-              feature, and make sure your projects are fully functional and ready for the final
-              presentation.
-            </p>
-          </CardContent>
-        </Card>
+      {/* 4 · the Top 3 mystery winners */}
+      <MysteryTop3 />
 
-        <Alert variant="info">
+      {/* 5 · the winner's podium */}
+      <WinnerPodium />
+
+      {/* 6 · live countdown to the reveal */}
+      <FinalRoundCountdown />
+
+      {/* closing note + timeline */}
+      <section className="container-page flex flex-col items-center gap-8 pb-16">
+        <Alert variant="info" className="max-w-2xl">
           <HeartHandshake className="size-4" aria-hidden />
           <AlertTitle>To all the teams who couldn&apos;t make it this time</AlertTitle>
           <AlertDescription>
             Don&apos;t be discouraged! Your participation and effort are truly appreciated. Keep
-            learning, keep building, and come back stronger. We look forward to seeing even more
-            enthusiastic participation in our future events!
+            learning, keep building, and come back stronger next year.
           </AlertDescription>
         </Alert>
 
-        <div className="flex flex-col items-center gap-2">
-          <Sparkles className="size-5 text-primary" />
-          <p className="text-body-lg font-semibold text-foreground">
-            Finalists, this is your moment — give it your best!
+        <div className="flex flex-col items-center gap-2 text-center">
+          <Sparkles className="size-5 text-primary" aria-hidden />
+          <p className="font-mono text-sm uppercase tracking-[0.3em] text-muted-foreground">
+            The final round decides everything
+          </p>
+          <p className="font-display text-h4 font-semibold text-foreground">
+            See you on September 8.
           </p>
         </div>
 
-        <Button asChild variant="outline" size="sm" className="mt-2">
+        <Button asChild variant="outline" size="sm">
           <Link href="/project-journey">
-            View the timeline
+            View the full timeline
             <ArrowRight aria-hidden />
           </Link>
         </Button>
