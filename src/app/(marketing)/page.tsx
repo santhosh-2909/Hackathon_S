@@ -11,6 +11,7 @@ import { StackGuide } from '@/features/marketing/stack-guide';
 import { DirectoryPreview } from '@/features/marketing/directory-preview';
 import { CtaBand } from '@/features/marketing/cta-band';
 import { FinalsDateHighlight } from '@/features/marketing/finals-date-highlight';
+import { PhotoGallery } from '@/features/gallery/PhotoGallery';
 import { DirectoryPreviewSkeleton } from '@/features/marketing/directory-preview-skeleton';
 import { FinalistsSheet } from '@/features/top10/FinalistsSheet';
 
@@ -35,6 +36,7 @@ export default function HomePage() {
         // Serialised from a literal we control — no user input reaches this string.
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <PhotoGallery />
       <section className="relative isolate overflow-hidden rounded-[28px] border border-border shadow-lg">
         <HyperspeedBackground />
         <Hero />
