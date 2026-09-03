@@ -26,18 +26,28 @@ function Hero() {
     <section className="relative isolate overflow-hidden">
       {/* Final PPT template banner */}
       <div className="container-page mb-6">
-        <div className="rounded-xl border border-slate-200/80 bg-white dark:bg-slate-900 p-4 flex items-center justify-between gap-4">
+        <div className="flex flex-col gap-4 rounded-xl border border-slate-200/80 bg-white p-4 sm:flex-row sm:items-center sm:justify-between dark:bg-slate-900">
           <div>
             <p className="text-sm font-semibold">Final PPT Template</p>
-            <p className="text-xs text-slate-500">Use this final template for your Finals pitch. Do not modify the template — changing the template may lead to disqualification.</p>
+            <p className="mt-0.5 text-xs text-slate-500">
+              Use this final template for your Finals pitch. Do not modify the template — changing
+              the template may lead to disqualification.
+            </p>
           </div>
-          <div className="ml-auto">
-            <Button asChild size="lg" className="h-10 px-4 bg-sky-600 text-white hover:bg-sky-700">
-              <a href={WORKSHOP_DECK.finalFileHref} download aria-label="Download Final presentation">
-                Download Final_pres.pptx
-              </a>
-            </Button>
-          </div>
+          <Button
+            asChild
+            size="lg"
+            className="h-11 w-full shrink-0 bg-sky-600 text-white hover:bg-sky-700 sm:m-auto sm:h-10 sm:w-auto sm:px-4"
+          >
+            <a
+              href={WORKSHOP_DECK.finalFileHref}
+              download
+              aria-label="Download Final presentation"
+              className="whitespace-normal sm:whitespace-nowrap"
+            >
+              Download Final_pres.pptx
+            </a>
+          </Button>
         </div>
       </div>
       <div className="relative container-page grid gap-14 py-20 md:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-center lg:gap-16 xl:py-28">

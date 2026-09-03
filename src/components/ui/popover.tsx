@@ -23,6 +23,7 @@ function PopoverContent({
         sideOffset={sideOffset}
         className={cn(
           'z-50 w-72 rounded-lg border border-border bg-surface-raised p-4 shadow-e3 outline-none',
+          'max-w-[calc(100vw-1rem)]',
           'data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-98',
           'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-98',
           className,

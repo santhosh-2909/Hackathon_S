@@ -209,6 +209,7 @@ const FallingText = ({
       className={`falling-text-container ${className}`}
       onClick={trigger === 'click' ? handleTrigger : undefined}
       onMouseEnter={trigger === 'hover' ? handleTrigger : undefined}
+      onTouchStart={trigger === 'hover' || trigger === 'click' ? handleTrigger : undefined}
       style={{
         position: 'relative',
         overflow: 'hidden',

@@ -28,6 +28,39 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-synthesis-weight: none;
+    /* Never allow a child to push the document wider than the viewport. */
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  html {
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+  }
+
+  /* Responsive media defaults — images/logos never exceed their container. */
+  img,
+  video,
+  canvas,
+  svg,
+  picture {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Keep every box inside its parent unless it explicitly opts out. */
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  /* Prevent iOS/Android auto-zoom when a field is focused. */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
   }
 
   /* One focus treatment, everywhere. Keyboard-only by default; components that

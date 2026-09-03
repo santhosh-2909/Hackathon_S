@@ -15,18 +15,26 @@ export function FinalistsLineup({
       <div
         className={
           columns === 2
-            ? 'grid grid-cols-1 items-center gap-6 lg:grid-cols-2 lg:gap-8'
-            : 'grid grid-cols-1 items-center gap-3.5'
+            ? 'grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8'
+            : 'w-full'
         }
       >
-        <ol className="flex flex-col gap-3.5">
-          {leftTeamColumn.map((team) => (
-            <TeamRow key={team.rank} team={team} />
-          ))}
-        </ol>
-        {columns === 2 && (
-          <ol className="flex flex-col gap-3.5">
-            {rightTeamColumn.map((team) => (
+        {columns === 2 ? (
+          <>
+            <ol className="flex flex-col gap-3.5">
+              {leftTeamColumn.map((team) => (
+                <TeamRow key={team.rank} team={team} />
+              ))}
+            </ol>
+            <ol className="flex flex-col gap-3.5">
+              {rightTeamColumn.map((team) => (
+                <TeamRow key={team.rank} team={team} />
+              ))}
+            </ol>
+          </>
+        ) : (
+          <ol className="flex w-full flex-col gap-3.5">
+            {FINALIST_TEAMS.map((team) => (
               <TeamRow key={team.rank} team={team} />
             ))}
           </ol>
@@ -54,7 +62,7 @@ function TeamRow({ team }: { team: FinalistTeam }) {
       <TeamLogo team={team} />
       <div className="flex min-w-0 flex-col items-center gap-1">
         <span className="text-body-lg font-semibold text-foreground">{team.name}</span>
-        <span className="line-clamp-2 max-w-[16rem] text-center text-xs leading-snug text-muted-foreground">
+        <span className="line-clamp-3 max-w-full text-center text-xs leading-snug text-muted-foreground">
           {team.topic}
         </span>
       </div>

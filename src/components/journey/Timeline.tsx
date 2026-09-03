@@ -265,7 +265,7 @@ export function Timeline() {
             </p>
 
             {/* Countdown Cards */}
-            <div className="grid grid-cols-4 gap-3 text-center mb-6">
+            <div className="grid grid-cols-2 gap-3 text-center mb-6 sm:grid-cols-4">
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
                 <span className="block text-2xl font-bold text-slate-900 dark:text-white">
                   {String(timeLeft.days).padStart(2, '0')}
